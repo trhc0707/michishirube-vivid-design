@@ -189,14 +189,14 @@ export default function BusinessConsulting() {
                 <div className="text-5xl font-black mb-4">4言語</div>
                 <div className="text-sm text-gray-600 mb-2">多言語対応</div>
                 <p className="text-sm text-gray-700">
-                  英語・フランス語・スペイン語・日本語圏から最新情報を収集
+                  英語・フランス語・スペイン語・日本語で世界中のAIニュースを毎日収集。海外の最先端事例を日本市場に適応
                 </p>
               </div>
               <div className="text-center">
                 <div className="text-5xl font-black mb-4">AI特化</div>
                 <div className="text-sm text-gray-600 mb-2">最新AI技術</div>
                 <p className="text-sm text-gray-700">
-                  ChatGPT、Midjourney等の最新AIツールを活用
+                  シフト管理・在庫管理・日報・顧客対応・予約管理・マニュアル・コンテンツ・チャットボットの自動化実績
                 </p>
               </div>
               <div className="text-center">
