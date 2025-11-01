@@ -6,8 +6,8 @@ export default function Header() {
 
   const navItems = [
     { name: "HOME", color: "#4169E1", href: "/" },
-    { name: "SERVICE", color: "#FF8C00", href: "#service" },
-    { name: "ABOUT", color: "#4169E1", href: "#about" },
+    { name: "SERVICE", color: "#FF8C00", href: "/#service" },
+    { name: "ABOUT", color: "#4169E1", href: "/#about" },
     { name: "RESOURCES", color: "#32CD32", href: "/resources" },
     { name: "CONTACT", color: "#FF6347", href: "/contact" },
   ];
