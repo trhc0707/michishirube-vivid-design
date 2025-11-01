@@ -57,7 +57,7 @@ export default function ServiceSection() {
         { name: "AI研修", link: "/ai-services" },
         { name: "AI開発", link: "/ai-services" },
       ],
-      link: "/business-consulting"
+      link: "/ai-services"
     },
   ];
 
@@ -82,32 +82,33 @@ export default function ServiceSection() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {services.map((service, index) => (
-              <Link key={index} href={service.link}>
-                <div
-                  className="bg-white border border-gray-200 p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group relative cursor-pointer"
-                >
+              <div
+                key={index}
+                className="bg-white border border-gray-200 p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group relative"
+              >
+                <Link href={service.link}>
                   <div className="absolute top-4 right-4">
                     <ArrowUpRight className="text-gray-400 group-hover:text-gray-700 transition-colors" size={24} />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                  <h3 className="text-2xl font-bold mb-4 cursor-pointer">{service.title}</h3>
                   <p className="text-gray-600 text-sm mb-6">{service.description}</p>
-                  <div className="space-y-2">
-                    {service.items.map((item, idx) => (
-                      item.link ? (
-                        <Link key={idx} href={item.link}>
-                          <div className="inline-block bg-black text-white px-3 py-1 text-sm mr-2 mb-2 hover:bg-gray-800 transition-colors cursor-pointer">
-                            {item.name}
-                          </div>
-                        </Link>
-                      ) : (
-                        <div key={idx} className="inline-block bg-black text-white px-3 py-1 text-sm mr-2 mb-2">
+                </Link>
+                <div className="space-y-2">
+                  {service.items.map((item, idx) => (
+                    item.link ? (
+                      <Link key={idx} href={item.link}>
+                        <div className="inline-block bg-black text-white px-3 py-1 text-sm mr-2 mb-2 hover:bg-gray-800 transition-colors cursor-pointer">
                           {item.name}
                         </div>
-                      )
-                    ))}
-                  </div>
+                      </Link>
+                    ) : (
+                      <div key={idx} className="inline-block bg-black text-white px-3 py-1 text-sm mr-2 mb-2">
+                        {item.name}
+                      </div>
+                    )
+                  ))}
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
