@@ -14,41 +14,56 @@ export default function OverseasRelocation() {
     setIsVisible(true);
   }, []);
 
-  const services = [
+  const serviceCategories = [
     {
-      title: "カナダ移住",
-      description: "カナダへの移住をトータルサポート。ビザ申請から現地での生活立ち上げまで、経験豊富なスタッフがサポートします。",
-      features: ["永住権申請サポート", "就労ビザ取得", "学生ビザ取得", "現地生活サポート"]
+      category: "移住サポート",
+      services: [
+        {
+          title: "カナダ移住",
+          description: "カナダへの移住をトータルサポート。ビザ申請から現地での生活立ち上げまで、経験豊富なスタッフがサポートします。",
+          features: ["永住権申請サポート", "就労ビザ取得", "学生ビザ取得", "現地生活サポート"]
+        },
+        {
+          title: "メキシコ移住",
+          description: "温暖な気候と低コストで人気のメキシコ移住。ビザ取得から住居探し、銀行口座開設まで完全サポートします。",
+          features: ["一時居住ビザ取得", "永住ビザ取得", "住居探しサポート", "銀行口座開設サポート"]
+        },
+        {
+          title: "ジョージア移住",
+          description: "デジタルノマドに人気のジョージア。ビザなしで1年間滞在可能な制度を活用した移住をサポートします。",
+          features: ["ビザなし滞在サポート", "長期滞在ビザ取得", "現地ネットワーク構築", "生活立ち上げサポート"]
+        },
+        {
+          title: "ノマドビザ取得サポート",
+          description: "世界各国で導入が進むデジタルノマドビザ。取得条件の確認から申請書類作成まで完全サポートします。",
+          features: ["ビザ要件確認", "必要書類準備", "申請書類作成", "申請代行"]
+        }
+      ]
     },
     {
-      title: "メキシコ移住",
-      description: "温暖な気候と低コストで人気のメキシコ移住。ビザ取得から住居探し、銀行口座開設まで完全サポートします。",
-      features: ["一時居住ビザ取得", "永住ビザ取得", "住居探しサポート", "銀行口座開設サポート"]
+      category: "その他のサービス",
+      services: [
+        {
+          title: "海外移住後収入構築サポート",
+          description: "移住後の収入源を確保するためのサポート。オンラインビジネス、フリーランス、現地就職など、様々な選択肢を提案します。",
+          features: ["オンラインビジネス構築", "フリーランス支援", "現地就職サポート", "収入多様化戦略"]
+        },
+        {
+          title: "海外移住コミュニティ",
+          description: "海外移住を目指す仲間とつながるコミュニティ。情報交換、相談、現地情報の共有など、移住を成功させるためのネットワークを提供します。",
+          features: ["オンラインコミュニティ", "定期勉強会", "現地情報共有", "メンバー限定イベント"]
+        }
+      ]
     },
     {
-      title: "ジョージア移住",
-      description: "デジタルノマドに人気のジョージア。ビザなしで1年間滞在可能な制度を活用した移住をサポートします。",
-      features: ["ビザなし滞在サポート", "長期滞在ビザ取得", "現地ネットワーク構築", "生活立ち上げサポート"]
-    },
-    {
-      title: "海外移住個別相談",
-      description: "あなたに最適な移住先を一緒に考えます。予算、ライフスタイル、ビジネス展開など、様々な観点からアドバイスします。",
-      features: ["移住先選定相談", "予算プランニング", "ビザ戦略立案", "ロードマップ作成"]
-    },
-    {
-      title: "ノマドビザ取得サポート",
-      description: "世界各国で導入が進むデジタルノマドビザ。取得条件の確認から申請書類作成まで完全サポートします。",
-      features: ["ビザ要件確認", "必要書類準備", "申請書類作成", "申請代行"]
-    },
-    {
-      title: "海外移住コミュニティ",
-      description: "海外移住を目指す仲間とつながるコミュニティ。情報交換、相談、現地情報の共有など、移住を成功させるためのネットワークを提供します。",
-      features: ["オンラインコミュニティ", "定期勉強会", "現地情報共有", "メンバー限定イベント"]
-    },
-    {
-      title: "海外移住後収入構築サポート",
-      description: "移住後の収入源を確保するためのサポート。オンラインビジネス、フリーランス、現地就職など、様々な選択肢を提案します。",
-      features: ["オンラインビジネス構築", "フリーランス支援", "現地就職サポート", "収入多様化戦略"]
+      category: "個別相談",
+      services: [
+        {
+          title: "海外移住個別相談",
+          description: "あなたに最適な移住先を一緒に考えます。予算、ライフスタイル、ビジネス展開など、様々な観点からアドバイスします。",
+          features: ["移住先選定相談", "予算プランニング", "ビザ戦略立案", "ロードマップ作成"]
+        }
+      ]
     }
   ];
 
@@ -116,31 +131,40 @@ export default function OverseasRelocation() {
               <h2 className="text-4xl md:text-5xl font-bold">サービス一覧</h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {services.map((service, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="bg-white border border-gray-200 p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-                >
-                  <h3 className="text-2xl font-bold mb-4 border-b-2 border-black pb-2">
-                    {service.title}
+            <div className="space-y-16">
+              {serviceCategories.map((category, catIndex) => (
+                <div key={catIndex}>
+                  <h3 className="text-3xl font-bold mb-8 border-b-4 border-black pb-3 inline-block">
+                    {category.category}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start text-sm">
-                        <span className="text-black font-bold mr-2">•</span>
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mt-8">
+                    {category.services.map((service, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4, delay: index * 0.1 }}
+                        className="bg-white border border-gray-200 p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                      >
+                        <h4 className="text-2xl font-bold mb-4 border-b-2 border-black pb-2">
+                          {service.title}
+                        </h4>
+                        <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+                          {service.description}
+                        </p>
+                        <ul className="space-y-2">
+                          {service.features.map((feature, idx) => (
+                            <li key={idx} className="flex items-start text-sm">
+                              <span className="text-black font-bold mr-2">•</span>
+                              <span className="text-gray-700">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </motion.div>
                     ))}
-                  </ul>
-                </motion.div>
+                  </div>
+                </div>
               ))}
             </div>
           </motion.div>
