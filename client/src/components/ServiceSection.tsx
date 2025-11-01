@@ -50,12 +50,12 @@ export default function ServiceSection() {
       <div className="container relative z-10">
         <div className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <div className="text-center mb-4">
-            <p className="text-sm text-gray-600 mb-2">What we offer</p>
+            <p className="text-sm text-gray-600 mb-2">私たちのサービス</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-8">
-              SERVICES
+              サービス一覧
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto mb-16">
-              Through innovative technology solutions and unique approaches, we provide each client with a distinctive web experience.
+              革新的な技術ソリューションと独自のアプローチで、お客様一人ひとりに特別な体験を提供します。
             </p>
           </div>
 

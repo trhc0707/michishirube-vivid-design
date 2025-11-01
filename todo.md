@@ -55,3 +55,12 @@
 ## ヒーローセクションの変更
 - [x] ホームページのヒーローセクションのメインテキストを「Global AI × Relocation」に変更する
 - [x] サブテキストを「4言語で世界をつなぎ、AIで未来を創る」に変更する
+
+## トップページの英文見出しの日本語化
+- [x] ServiceSectionの"What we offer"を日本語に変更する
+- [x] ServiceSectionの"SERVICES"を日本語に変更する
+- [x] AboutSectionの"Who we are"を日本語に変更する
+- [x] AboutSectionの"About Us"を日本語に変更する
+- [x] DownloadSectionの"DOWNLOAD"を日本語に変更する
+- [x] ContactSectionの"CONTACT"を日本語に変更する
+- [x] その他の英文見出しを確認して日本語化する
