@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { useLocation } from "wouter";
 
 export default function AboutSection() {
   const [isVisible, setIsVisible] = useState(true);
   const sectionRef = useRef<HTMLElement>(null);
+  const [, setLocation] = useLocation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -77,7 +79,10 @@ export default function AboutSection() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
-            <Button className="bg-[#333333] hover:bg-[#1a1a1a] text-white py-6 text-lg">
+            <Button 
+              className="bg-[#333333] hover:bg-[#1a1a1a] text-white py-6 text-lg"
+              onClick={() => setLocation("/about-us")}
+            >
               会社概要 →
             </Button>
             <Button className="bg-[#333333] hover:bg-[#1a1a1a] text-white py-6 text-lg">
