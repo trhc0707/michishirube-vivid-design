@@ -18,9 +18,9 @@ export default function Header() {
           {/* Logo */}
           <a href="/" className="flex items-center">
             <img 
-              src="https://via.placeholder.com/150x40/7FFF00/FFFFFF?text=YOUR+COMPANY" 
-              alt="Company Logo" 
-              className="h-10"
+              src="/logo.png" 
+              alt="MichiShirube OÜ Logo" 
+              className="h-12"
             />
           </a>
 
