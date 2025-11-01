@@ -110,21 +110,25 @@ export default function Resources() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative bg-white pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0 pattern-text">
-            お役立ち資料お役立ち資料お役立ち資料お役立ち資料お役立ち資料お役立ち資料お役立ち資料お役立ち資料お役立ち資料お役立ち資料
-          </div>
+      <section className="relative pt-32 pb-20 overflow-hidden" style={{ minHeight: '60vh', display: 'flex', alignItems: 'center' }}>
+        {/* Background Image with Overlay */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/hero-bg.png')",
+          }}
+        >
+          <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto"
+            className="text-center max-w-3xl mx-auto text-white"
           >
             <div className="inline-block mb-6">
-              <div className="flex items-center gap-2 bg-black text-white px-6 py-2">
+              <div className="flex items-center gap-2 bg-white text-black px-6 py-2">
                 <FileText className="h-5 w-5" />
                 <span className="font-bold">RESOURCES</span>
               </div>
@@ -132,10 +136,10 @@ export default function Resources() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               お役立ち資料
             </h1>
-            <p className="text-xl text-gray-600 mb-4">
+            <p className="text-xl mb-4">
               海外移住とAI活用の最新情報を無料でお届け
             </p>
-            <p className="text-gray-600">
+            <p className="text-gray-200">
               LINE登録で、セミナー動画やガイドPDFをすぐに受け取れます
             </p>
           </motion.div>
@@ -143,8 +147,8 @@ export default function Resources() {
       </section>
 
       {/* Relocation Resources Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="absolute inset-0 opacity-5">
+      <section className="relative py-20 bg-gray-50">
+        <div className="absolute inset-0 opacity-5 pointer-events-none">
           <div className="absolute inset-0 pattern-text">
             海外移住海外移住海外移住海外移住海外移住海外移住海外移住海外移住海外移住海外移住海外移住海外移住海外移住海外移住海外移住
           </div>
@@ -174,8 +178,8 @@ export default function Resources() {
       </section>
 
       {/* AI Resources Section */}
-      <section className="py-20 bg-white">
-        <div className="absolute inset-0 opacity-5">
+      <section className="relative py-20 bg-white">
+        <div className="absolute inset-0 opacity-5 pointer-events-none">
           <div className="absolute inset-0 pattern-text">
             AI活用AI活用AI活用AI活用AI活用AI活用AI活用AI活用AI活用AI活用AI活用AI活用AI活用AI活用AI活用AI活用AI活用AI活用AI活用AI活用
           </div>
