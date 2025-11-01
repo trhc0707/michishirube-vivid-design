@@ -27,7 +27,7 @@ export default function Footer() {
             <a href="/resources" className="text-gray-300 hover:text-white transition-colors">
               RESOURCES
             </a>
-            <a href="#contact" className="text-gray-300 hover:text-white transition-colors">
+            <a href="/contact" className="text-gray-300 hover:text-white transition-colors">
               CONTACT
             </a>
           </nav>

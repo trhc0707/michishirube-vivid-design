@@ -9,6 +9,7 @@ import OverseasRelocation from "./pages/OverseasRelocation";
 import BusinessConsulting from "./pages/BusinessConsulting";
 import AboutUs from "./pages/AboutUs";
 import Resources from "./pages/Resources";
+import Contact from "./pages/Contact";
 
 function Router() {
   return (
@@ -17,8 +18,9 @@ function Router() {
       <Route path={"/overseas-relocation"} component={OverseasRelocation} />
       <Route path={"/business-consulting"} component={BusinessConsulting} />
       <Route path={"/about-us"} component={AboutUs} />
-      <Route path={"/resources"} component={Resources} />
-      <Route path={"/404"} component={NotFound} />
+      <Route path="/resources" component={Resources} />
+      <Route path="/contact" component={Contact} />
+      <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
     </Switch>

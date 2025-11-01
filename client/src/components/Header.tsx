@@ -9,7 +9,7 @@ export default function Header() {
     { name: "SERVICE", color: "#FF8C00", href: "#service" },
     { name: "ABOUT", color: "#4169E1", href: "#about" },
     { name: "RESOURCES", color: "#32CD32", href: "/resources" },
-    { name: "CONTACT", color: "#FF6347", href: "#contact" },
+    { name: "CONTACT", color: "#FF6347", href: "/contact" },
   ];
 
   return (
