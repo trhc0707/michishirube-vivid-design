@@ -9,7 +9,7 @@ export default function Footer() {
               MichiShirube OÜ
             </h3>
             <p className="text-sm text-gray-400">
-              Making the world better through design
+              4言語で世界をつなぎ、AIで未来を創る
             </p>
           </div>
 

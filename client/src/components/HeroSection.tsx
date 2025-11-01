@@ -9,9 +9,11 @@ export default function HeroSection() {
   }, []);
 
   const newsItems = [
-    "2023/11/26 Revolutionary new service announcement! Digital marketing future changes",
-    "2023/11/26 Partnership with industry leader! Expanding into new markets",
-    "2023/11/26 Latest AI technology introduced, web design services evolve",
+    "2025/01/15 AI導入支援実績100社突破！シフト管理・在庫管理・顧客対応など8種類の業務自動化を実現",
+    "2025/01/10 カナダ・メキシコ・ジョージアへの移住サポート60名以上達成！11年の海外経験でトータルサポート",
+    "2024/12/20 4言語対応のグローバルAIコンサルティング開始！英語・フランス語・スペイン語・日本語で世界中の最新AI情報を毎日収集",
+    "2024/12/01 日仏国際チームによるAI×海外移住の包括サポート！エストニア法人として日本市場に海外最先端事例を提供",
+    "2024/11/15 SNS総フォロワー28,000名突破！700名以上の個別相談実績で、あなたの生き方をサポート",
   ];
 
   return (
