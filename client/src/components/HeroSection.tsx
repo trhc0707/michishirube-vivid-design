@@ -32,15 +32,11 @@ export default function HeroSection() {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
-        <h1 className="text-6xl md:text-8xl font-black mb-4">
-          VIVID
-          <br />
-          DESIGN
+        <h1 className="text-5xl md:text-7xl font-black mb-6">
+          Global AI × Relocation
         </h1>
-        <p className="text-2xl md:text-3xl font-light italic mb-2">for</p>
-        <p className="text-3xl md:text-4xl font-bold">SOCIETY</p>
-        <p className="mt-8 text-lg md:text-xl max-w-2xl mx-auto px-4">
-          Combining digital innovation and creativity
+        <p className="mt-8 text-xl md:text-2xl max-w-3xl mx-auto px-4 font-light">
+          4言語で世界をつなぎ、AIで未来を創る
         </p>
       </div>
 
