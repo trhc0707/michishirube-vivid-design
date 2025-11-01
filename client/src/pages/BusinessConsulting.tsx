@@ -37,6 +37,16 @@ export default function BusinessConsulting() {
           title: "AI導入",
           description: "AIツールの導入支援。ChatGPT、Midjourney、各種AIツールを業務に組み込み、生産性を大幅に向上させます。",
           features: ["ツール導入支援", "業務フロー設計", "マニュアル作成", "運用サポート"]
+        },
+        {
+          title: "AIコミュニティ",
+          description: "AI活用を学び、実践するコミュニティ。個人事業主・フリーランス（0-5名規模）向けに、AIで効率化する方法を学べます。",
+          features: ["オンラインコミュニティ", "定期勉強会", "AI活用事例共有", "メンバー限定コンテンツ"]
+        },
+        {
+          title: "個別相談",
+          description: "あなたのビジネス課題を一緒に解決します。AI導入、マーケティング戦略、業務効率化など、様々な観点からアドバイスします。",
+          features: ["課題ヒアリング", "解決策提案", "実行計画策定", "フォローアップ"]
         }
       ]
     },
@@ -77,16 +87,6 @@ export default function BusinessConsulting() {
           title: "Google/Meta広告運用",
           description: "Google広告、Facebook・Instagram広告の運用代行。費用対効果を最大化し、ビジネスの成長を加速させます。",
           features: ["広告戦略立案", "クリエイティブ制作", "入札最適化", "レポーティング"]
-        }
-      ]
-    },
-    {
-      category: "個別相談",
-      services: [
-        {
-          title: "ビジネス個別相談",
-          description: "あなたのビジネス課題を一緒に解決します。AI導入、マーケティング戦略、業務効率化など、様々な観点からアドバイスします。",
-          features: ["課題ヒアリング", "解決策提案", "実行計画策定", "フォローアップ"]
         }
       ]
     }
