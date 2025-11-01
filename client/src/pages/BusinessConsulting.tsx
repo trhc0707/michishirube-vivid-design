@@ -1,10 +1,19 @@
 import { ArrowLeft } from "lucide-react";
-import { Link } from "wouter";
+import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function BusinessConsulting() {
+  const [, setLocation] = useLocation();
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   const services = [
     {
       title: "LINE構築・運用代行",
@@ -64,66 +73,180 @@ export default function BusinessConsulting() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen bg-white">
       <Header />
       
-      <main className="flex-1">
-        {/* Hero Section */}
-        <section className="relative py-24 bg-gray-900 text-white">
-          <div className="container">
-            <Link href="/">
-              <Button variant="ghost" className="mb-8 text-white hover:text-gray-300">
-                <ArrowLeft className="mr-2" size={20} />
-                戻る
-              </Button>
-            </Link>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              ビジネス/マーケティングコンサルティング
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl">
-              デジタルマーケティングからAI活用まで、ビジネスの成長を加速させる包括的なコンサルティングサービスを提供します。
-            </p>
-          </div>
-        </section>
+      {/* Hero Section */}
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/hero-bg.png')",
+          }}
+        >
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
 
-        {/* Services Grid */}
-        <section className="py-24 bg-gray-50">
-          <div className="container">
+        <div
+          className={`relative z-10 text-center text-white transition-all duration-1000 px-4 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <h1 className="text-4xl md:text-6xl font-black mb-4">
+            ビジネス/マーケティング
+            <br />
+            コンサルティング
+          </h1>
+          <p className="text-lg md:text-2xl font-light max-w-3xl mx-auto">
+            デジタルマーケティングからAI活用まで
+          </p>
+        </div>
+      </section>
+
+      {/* Introduction */}
+      <section className="py-24 bg-white">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto text-center"
+          >
+            <p className="text-lg text-gray-700 leading-relaxed">
+              LINE構築、SNS運用、ホームページ制作、広告運用などのデジタルマーケティングから、AI導入・活用まで、ビジネスの成長を加速させる包括的なコンサルティングサービスを提供します。
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="relative py-24 bg-gray-50 overflow-hidden">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="pattern-text">SERVICES SERVICES SERVICES</div>
+        </div>
+
+        <div className="container relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="text-center mb-16">
+              <p className="text-sm text-gray-600 mb-2">Our Services</p>
+              <h2 className="text-4xl md:text-5xl font-bold">サービス一覧</h2>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {services.map((service, index) => (
-                <div
+                <motion.div
                   key={index}
-                  className="bg-white p-6 md:p-8 border border-gray-200 hover:shadow-xl transition-all duration-300"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  className="bg-white border border-gray-200 p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
                 >
-                  <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  <h3 className="text-2xl font-bold mb-4 border-b-2 border-black pb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start">
-                        <span className="text-[#9370DB] mr-2">✓</span>
-                        <span className="text-sm">{feature}</span>
+                      <li key={idx} className="flex items-start text-sm">
+                        <span className="text-black font-bold mr-2">•</span>
+                        <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
-        </section>
+          </motion.div>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="py-24 bg-white">
-          <div className="container text-center">
-            <h2 className="text-4xl font-bold mb-6">まずは無料相談から</h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              あなたのビジネス課題について、専門スタッフが無料でご相談に応じます。お気軽にお問い合わせください。
+      {/* Why Choose Us */}
+      <section className="py-24 bg-white">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="text-center mb-16">
+              <p className="text-sm text-gray-600 mb-2">Our Strength</p>
+              <h2 className="text-4xl md:text-5xl font-bold">私たちの強み</h2>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="text-5xl font-black mb-4">4言語</div>
+                <div className="text-sm text-gray-600 mb-2">多言語対応</div>
+                <p className="text-sm text-gray-700">
+                  英語・フランス語・スペイン語・日本語圏から最新情報を収集
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="text-5xl font-black mb-4">AI特化</div>
+                <div className="text-sm text-gray-600 mb-2">最新AI技術</div>
+                <p className="text-sm text-gray-700">
+                  ChatGPT、Midjourney等の最新AIツールを活用
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="text-5xl font-black mb-4">実践型</div>
+                <div className="text-sm text-gray-600 mb-2">実践的サポート</div>
+                <p className="text-sm text-gray-700">
+                  理論だけでなく実際の業務に即した実践的な支援
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="relative py-24 bg-gray-50 overflow-hidden">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="pattern-text">CONTACT CONTACT CONTACT</div>
+        </div>
+
+        <div className="container relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl mx-auto text-center"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              ビジネスの成長を加速させましょう
+            </h2>
+            <p className="text-lg text-gray-600 mb-12">
+              まずは無料相談で、あなたのビジネス課題をお聞かせください。最適なソリューションをご提案いたします。
             </p>
-            <Button className="bg-[#333333] hover:bg-[#1a1a1a] text-white px-8 py-6 text-lg">
-              無料相談を申し込む →
-            </Button>
-          </div>
-        </section>
-      </main>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+              <Button 
+                className="bg-[#333333] hover:bg-[#1a1a1a] text-white py-6 text-lg"
+              >
+                無料相談を申し込む
+              </Button>
+              <Button 
+                className="bg-[#333333] hover:bg-[#1a1a1a] text-white py-6 text-lg"
+                onClick={() => setLocation("/")}
+              >
+                ホームに戻る
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       <Footer />
     </div>
