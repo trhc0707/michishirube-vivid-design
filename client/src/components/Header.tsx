@@ -5,10 +5,11 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "HOME", color: "#4169E1" },
-    { name: "SERVICE", color: "#FF8C00" },
-    { name: "ABOUT", color: "#4169E1" },
-    { name: "CONTACT", color: "#FF6347" },
+    { name: "HOME", color: "#4169E1", href: "/" },
+    { name: "SERVICE", color: "#FF8C00", href: "#service" },
+    { name: "ABOUT", color: "#4169E1", href: "#about" },
+    { name: "RESOURCES", color: "#32CD32", href: "/resources" },
+    { name: "CONTACT", color: "#FF6347", href: "#contact" },
   ];
 
   return (
@@ -41,7 +42,7 @@ export default function Header() {
           {navItems.map((item) => (
             <a
               key={item.name}
-              href={item.name === "HOME" ? "/" : `#${item.name.toLowerCase().replace(" ", "-")}`}
+              href={item.href}
               className="flex flex-col items-center gap-2 group"
             >
               {/* Colored line above text */}
@@ -67,7 +68,7 @@ export default function Header() {
             {navItems.map((item) => (
               <a
                 key={item.name}
-                href={item.name === "HOME" ? "/" : `#${item.name.toLowerCase().replace(" ", "-")}`}
+                href={item.href}
                 className="block px-4 py-3 text-white hover:bg-white/10 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
