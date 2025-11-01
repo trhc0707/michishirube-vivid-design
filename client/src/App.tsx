@@ -10,10 +10,7 @@ import BusinessConsulting from "./pages/BusinessConsulting";
 import AboutUs from "./pages/AboutUs";
 import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
-import AIConsulting from "./pages/AIConsulting";
-import AITraining from "./pages/AITraining";
-import AIDevelopment from "./pages/AIDevelopment";
-import AIImplementation from "./pages/AIImplementation";
+import AIServices from "./pages/AIServices";
 
 function Router() {
   return (
@@ -24,10 +21,7 @@ function Router() {
       <Route path={"/about-us"} component={AboutUs} />
       <Route path="/resources" component={Resources} />
       <Route path="/contact" component={Contact} />
-      <Route path="/ai-consulting" component={AIConsulting} />
-      <Route path="/ai-training" component={AITraining} />
-      <Route path="/ai-development" component={AIDevelopment} />
-      <Route path="/ai-implementation" component={AIImplementation} />
+      <Route path="/ai-services" component={AIServices} />
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 
-export default function AIDevelopmentHeroSection() {
+export default function AIServicesHeroSection() {
   const scrollToContact = () => {
     const element = document.getElementById("contact");
     if (element) {
@@ -19,27 +19,27 @@ export default function AIDevelopmentHeroSection() {
           <div className="text-white" data-aos="fade-up">
             {/* バッジ */}
             <div className="inline-block bg-white text-gray-800 px-6 py-2 rounded-full text-sm mb-6">
-              あなたのビジネスに最適化されたAIシステム
+              待つ導入から、攻める導入へ、AI時代の新しい業務効率化
             </div>
 
             {/* 見出し */}
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 md:mb-6">
-              AI開発サービス
+              AI導入・活用<br />総合サービス
             </h1>
 
             {/* 説明文 */}
             <div className="text-base md:text-lg lg:text-xl mb-6 md:mb-8 space-y-1 md:space-y-2">
-              <p>既製品では解決できない課題に、</p>
-              <p>カスタムAIソリューションで応える。</p>
-              <p>海外の最先端技術を活用した完全オーダーメイド開発</p>
+              <p>「なんとなく」でAIを導入しても成果は出ない。</p>
+              <p>海外の最先端事例と独自の導入メソッドを活用し、</p>
+              <p>あなたの会社に最適な自動化・効率化をトータルサポート</p>
             </div>
 
             {/* 統計サークル */}
             <div className="flex gap-3 md:gap-6 mb-6 md:mb-8">
               {[
-                { label: "開発実績", value: "50", unit: "+" },
-                { label: "稼働率", value: "99", unit: "%" },
-                { label: "ROI改善", value: "3.2", unit: "x" },
+                { label: "人件費削減", value: "30", unit: "%" },
+                { label: "業務効率化", value: "95", unit: "%" },
+                { label: "導入成功率", value: "93", unit: "%" },
               ].map((stat, index) => (
                 <div
                   key={index}
@@ -67,7 +67,7 @@ export default function AIDevelopmentHeroSection() {
                 style={{ backgroundColor: "rgb(255, 107, 74)" }}
                 onClick={scrollToContact}
               >
-                開発プロジェクトを相談
+                まずは無料で相談！
               </Button>
             </div>
           </div>
@@ -77,7 +77,7 @@ export default function AIDevelopmentHeroSection() {
             <div className="rounded-2xl overflow-hidden border-orange" style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}>
               <img 
                 src="/dashboard-hero.png" 
-                alt="AI開発イメージ" 
+                alt="AI導入・活用サービスイメージ" 
                 className="w-full h-auto"
               />
             </div>
@@ -87,9 +87,9 @@ export default function AIDevelopmentHeroSection() {
 
       {/* 注釈 */}
       <div className="absolute bottom-16 md:bottom-20 right-4 md:right-8 text-white text-[10px] md:text-xs max-w-[200px] md:max-w-xs text-right">
-        <p>*2024年度開発プロジェクト実績</p>
-        <p>*システム稼働率（過去12ヶ月平均）</p>
-        <p>*導入企業の平均投資対効果</p>
+        <p>*2024年度当社サービス利用による</p>
+        <p>*導入後12ヶ月後、業界平均の2倍以上</p>
+        <p>*小さくスタート・段階的展開による成功率</p>
       </div>
     </section>
   );

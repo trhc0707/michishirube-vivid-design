@@ -2,31 +2,31 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Header from "@/components/Header";
-import AITrainingHeroSection from "@/components/lp/AITrainingHeroSection";
+import Footer from "@/components/Footer";
+import AIServicesHeroSection from "@/components/lp/AIServicesHeroSection";
 import ProblemsSection from "@/components/ProblemsSection";
+import AIServicesSection from "@/components/lp/AIServicesSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import ResultsSection from "@/components/ResultsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FlowSection from "@/components/FlowSection";
 import ContactSection from "@/components/ContactSection";
-import Footer from "@/components/Footer";
 
-export default function AITraining() {
+export default function AIServices() {
   useEffect(() => {
     AOS.init({
-      duration: 800,
-      easing: "ease-in-out",
+      duration: 1000,
       once: true,
-      offset: 100,
     });
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <Header />
-      <main>
-        <AITrainingHeroSection />
+      <main className="flex-1">
+        <AIServicesHeroSection />
         <ProblemsSection />
+        <AIServicesSection />
         <FeaturesSection />
         <ResultsSection />
         <TestimonialsSection />
