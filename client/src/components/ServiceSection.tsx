@@ -41,7 +41,7 @@ export default function ServiceSection() {
   ];
 
   return (
-    <section ref={sectionRef} className="relative py-24 bg-gray-50 overflow-hidden">
+    <section id="service" ref={sectionRef} className="relative py-24 bg-gray-50 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="pattern-text">SERVICE SERVICE SERVICE</div>

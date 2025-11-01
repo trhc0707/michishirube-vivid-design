@@ -42,7 +42,7 @@ export default function CTASection() {
         </div>
 
         {/* Contact CTA */}
-        <div className="relative h-96 md:h-[500px] overflow-hidden group cursor-pointer">
+        <div id="contact" className="relative h-96 md:h-[500px] overflow-hidden group cursor-pointer">
           <div
             className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
             style={{

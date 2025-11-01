@@ -13,7 +13,21 @@ export default function Footer() {
             </p>
           </div>
 
-
+          {/* Navigation Menu */}
+          <nav className="flex flex-wrap gap-6">
+            <a href="/" className="text-gray-300 hover:text-white transition-colors">
+              HOME
+            </a>
+            <a href="#service" className="text-gray-300 hover:text-white transition-colors">
+              SERVICE
+            </a>
+            <a href="#about" className="text-gray-300 hover:text-white transition-colors">
+              ABOUT
+            </a>
+            <a href="#contact" className="text-gray-300 hover:text-white transition-colors">
+              CONTACT
+            </a>
+          </nav>
         </div>
 
 
