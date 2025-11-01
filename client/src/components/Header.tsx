@@ -41,7 +41,7 @@ export default function Header() {
           {navItems.map((item) => (
             <a
               key={item.name}
-              href={`#${item.name.toLowerCase().replace(" ", "-")}`}
+              href={item.name === "HOME" ? "/" : `#${item.name.toLowerCase().replace(" ", "-")}`}
               className="flex flex-col items-center gap-2 group"
             >
               {/* Colored line above text */}
@@ -67,7 +67,7 @@ export default function Header() {
             {navItems.map((item) => (
               <a
                 key={item.name}
-                href={`#${item.name.toLowerCase().replace(" ", "-")}`}
+                href={item.name === "HOME" ? "/" : `#${item.name.toLowerCase().replace(" ", "-")}`}
                 className="block px-4 py-3 text-white hover:bg-white/10 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
