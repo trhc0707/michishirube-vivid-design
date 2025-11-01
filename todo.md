@@ -64,3 +64,7 @@
 - [x] DownloadSectionの"DOWNLOAD"を日本語に変更する
 - [x] ContactSectionの"CONTACT"を日本語に変更する
 - [x] その他の英文見出しを確認して日本語化する
+
+## ヘッダーナビゲーションメニューの変更
+- [x] ナビゲーションメニューを「HOME、SERVICE、ABOUT、CONTACT」に変更する
+- [x] 順序を左から「HOME、SERVICE、ABOUT、CONTACT」にする

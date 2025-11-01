@@ -5,8 +5,8 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "SERVICES", color: "#4169E1" },
-    { name: "HOME B", color: "#FF8C00" },
+    { name: "HOME", color: "#4169E1" },
+    { name: "SERVICE", color: "#FF8C00" },
     { name: "ABOUT", color: "#4169E1" },
     { name: "CONTACT", color: "#FF6347" },
   ];
