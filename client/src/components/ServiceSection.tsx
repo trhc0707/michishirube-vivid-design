@@ -28,14 +28,35 @@ export default function ServiceSection() {
       title: "海外移住サポート",
       description: "カナダ、メキシコ、ジョージアなどへの移住をトータルサポート。ビザ取得から現地生活の立ち上げ、移住後の収入構築まで、経験豊富なスタッフが全面的にサポートします。",
       color: "border-[#00CED1]",
-      items: ["カナダ移住", "メキシコ移住", "ジョージア移住", "海外移住個別相談", "ノマドビザ取得サポート", "海外移住コミュニティ", "海外移住後収入構築サポート"],
+      items: [
+        { name: "カナダ移住" },
+        { name: "メキシコ移住" },
+        { name: "ジョージア移住" },
+        { name: "海外移住個別相談" },
+        { name: "ノマドビザ取得サポート" },
+        { name: "海外移住コミュニティ" },
+        { name: "海外移住後収入構築サポート" },
+      ],
       link: "/overseas-relocation"
     },
     {
       title: "ビジネス/マーケティングコンサルティング",
       description: "LINE構築、SNS運用、ホームページ制作、広告運用などのデジタルマーケティングから、AI導入・活用まで、ビジネスの成長を加速させる包括的なコンサルティングサービスを提供します。",
       color: "border-[#9370DB]",
-      items: ["LINE構築・運用代行", "動画編集", "SNS運用代行", "ホームページ制作", "LP制作", "MEO対策", "Google/Meta広告運用", "AIコミュニティ", "AIコンサルティング", "AI導入", "AI研修"],
+      items: [
+        { name: "LINE構築・運用代行" },
+        { name: "動画編集" },
+        { name: "SNS運用代行" },
+        { name: "ホームページ制作" },
+        { name: "LP制作" },
+        { name: "MEO対策" },
+        { name: "Google/Meta広告運用" },
+        { name: "AIコミュニティ" },
+        { name: "AIコンサルティング", link: "/ai-consulting" },
+        { name: "AI導入", link: "/ai-implementation" },
+        { name: "AI研修", link: "/ai-training" },
+        { name: "AI開発", link: "/ai-development" },
+      ],
       link: "/business-consulting"
     },
   ];
@@ -72,9 +93,17 @@ export default function ServiceSection() {
                   <p className="text-gray-600 text-sm mb-6">{service.description}</p>
                   <div className="space-y-2">
                     {service.items.map((item, idx) => (
-                      <div key={idx} className="inline-block bg-black text-white px-3 py-1 text-sm mr-2 mb-2">
-                        {item}
-                      </div>
+                      item.link ? (
+                        <Link key={idx} href={item.link}>
+                          <div className="inline-block bg-black text-white px-3 py-1 text-sm mr-2 mb-2 hover:bg-gray-800 transition-colors cursor-pointer">
+                            {item.name}
+                          </div>
+                        </Link>
+                      ) : (
+                        <div key={idx} className="inline-block bg-black text-white px-3 py-1 text-sm mr-2 mb-2">
+                          {item.name}
+                        </div>
+                      )
                     ))}
                   </div>
                 </div>
