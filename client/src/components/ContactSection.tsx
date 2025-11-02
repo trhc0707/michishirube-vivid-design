@@ -155,7 +155,7 @@ export default function ContactSection() {
             <Button
               type="submit"
               size="lg"
-              className="w-full text-lg font-bold py-6"
+              className="w-full text-lg font-bold py-6 animate-pulse hover:animate-none transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-2xl"
               style={{ background: "linear-gradient(135deg, rgb(255, 107, 74) 0%, rgb(255, 140, 100) 100%)" }}
             >
               無料相談を申し込む
