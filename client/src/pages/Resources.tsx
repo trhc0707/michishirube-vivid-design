@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 interface ResourceItem {
   id: string;
@@ -105,8 +106,38 @@ export default function Resources() {
   const relocationResources = resources.filter(r => r.category === "海外移住");
   const aiResources = resources.filter(r => r.category === "AI活用");
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "お役立ち資料 - MichiShirube OÜ",
+    "description": "海外移住・AI活用に関するお役立ち資料を無料でダウンロード",
+    "hasPart": [
+      {
+        "@type": "Article",
+        "name": "カナダ移住完全ガイドセミナー",
+        "description": "カナダ移住の最新情報、ビザ取得方法、生活費、仕事の見つけ方まで徹底解説"
+      },
+      {
+        "@type": "Article",
+        "name": "ジョージア移住セミナー",
+        "description": "ノマドビザの取得方法、生活費の安さ、治安、文化などを徹底解説"
+      },
+      {
+        "@type": "Article",
+        "name": "AI活用入門ガイド",
+        "description": "企業が今すぐ始められるAI活用の基礎から実践まで"
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead
+        title="お役立ち資料 - MichiShirube OÜ | 海外移住・AI活用ガイド"
+        description="海外移住（カナダ、ジョージア、メキシコ）やAI活用に関するお役立ち資料を無料でダウンロード。セミナー動画、完全ガイド、導入事例などを公開中。"
+        keywords="資料ダウンロード,無料資料,海外移住ガイド,AI活用ガイド,セミナー,カナダ移住,ジョージア移住,メキシコ子育て,AI導入,企業AI"
+        structuredData={structuredData}
+      />
       <Header />
       
       {/* Hero Section */}

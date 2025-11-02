@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import RelocationIncomeSupportHeroSection from "@/components/lp/RelocationIncomeSupportHeroSection";
 import ProblemsSection from "@/components/ProblemsSection";
 import FeaturesSection from "@/components/FeaturesSection";
@@ -18,6 +19,19 @@ export default function RelocationIncomeSupport() {
       once: true,
     });
   }, []);
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "海外移住後収入構築サポート - MichiShirube OÜ",
+    "description": "海外移住後の収入不安を解消。リモートワーク、フリーランス、起業支援で安定収入を実現",
+    "provider": {
+      "@type": "Organization",
+      "name": "MichiShirube OÜ"
+    },
+    "serviceType": "Relocation Income Support",
+    "areaServed": ["CA", "GE", "MX", "Global"]
+  };
 
   const problems = [
     {
@@ -165,6 +179,12 @@ export default function RelocationIncomeSupport() {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead
+        title="海外移住後収入構築サポート - MichiShirube OÜ | リモートワーク・フリーランス支援"
+        description="海外移住後の収入不安を解消。リモートワーク、フリーランス、起業支援で海外からでも安定収入を実現。スキル棚卸しからビジネス構築まで伴走サポート。収入化成功率90%。"
+        keywords="海外移住収入,移住後収入,リモートワーク,フリーランス,海外起業,オンラインビジネス,海外就職,ノマド,デジタルノマド,副業,個人事業主"
+        structuredData={structuredData}
+      />
       <Header />
       <RelocationIncomeSupportHeroSection />
       <ProblemsSection />

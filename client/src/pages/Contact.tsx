@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import SEOHead from "@/components/SEOHead";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Mail, MessageCircle, Send, Phone, MapPin } from "lucide-react";
@@ -34,8 +35,105 @@ export default function Contact() {
     });
   };
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "name": "お問い合わせ - MichiShirube OÜ",
+        "description": "海外移住、AIコンサルティング、ビジネスコンサルティングに関するお問い合わせはこちらから",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "MichiShirube OÜ",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "availableLanguage": ["Japanese", "English"],
+            "contactOption": ["TollFree"],
+            "areaServed": ["JP", "CA", "GE", "MX"]
+          }
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "お問い合わせしたら、どれくらいで返信いただけますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "通常、24時間以内に返信いたします。土日祈日の場合は、翌営業日の対応となります。お急ぎの場合は、LINE公式アカウントからのお問い合わせをお勧めいたします。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "相談は無料ですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "はい、初回相談は無料です。お客様の状況やニーズをお伺いし、最適なプランをご提案いたします。具体的なサービス内容や料金については、相談時に詳しくご説明いたします。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "海外移住サポートはどの国に対応していますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "主にカナダ、メキシコ、ジョージア、その他ノマドビザ対応国をサポートしています。各国のビザ取得、生活セットアップ、現地での収入構築まで、包括的にサポートいたします。その他の国への移住もご相談ください。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "AIサービスはどのような企業が対象ですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "中小企業から大企業まで、業種を問わずAI導入を検討されているすべての企業様が対象です。特に、業務効率化、コスト削減、顧客対応の改善を目指す企業様に最適です。初めてAIを導入する企業様も安心してご相談ください。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "AI導入にはどれくらいの期間がかかりますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "プロジェクトの規模によりますが、小規模なツール導入であれば1～2ヶ月、カスタムAI開発であれば3～6ヶ月程度が目安です。まずは無料相談でお客様のニーズをお伺いし、具体的なスケジュールをご提案いたします。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "オンラインでの相談は可能ですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "はい、オンライン相談に完全対応しています。ZoomやGoogle Meetなどのビデオ会議ツールを使用して、世界中どこからでも相談いただけます。海外在住の方や、地方にお住まいの方もお気軽にご相談ください。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "料金体系はどのようになっていますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "サービス内容によって異なります。海外移住サポート、AIコンサルティング、ビジネスコンサルティングそれぞれに最適なプランをご用意しています。初回相談時にお客様のニーズをお伺いし、詳しいお見積りをご提示いたします。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "サポート体制はどうなっていますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "日本語、英語、フランス語、スペイン語の4言語で対応可能です。日仏国際チームが、お客様のタイムゾーンに合わせて柔軟に対応いたします。プロジェクト開始後も、定期的なフォローアップとサポートを提供します。"
+            }
+          }
+        ]
+      }
+    ]
+  };
+
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen">
+      <SEOHead
+        title="お問い合わせ - MichiShirube OÜ | 海外移住・AI・ビジネスコンサルティング"
+        description="海外移住、AI導入、ビジネスマーケティングに関するご相談はお気軽に。メールまたはLINEでお問い合わせいただけます。初回相談無料。"
+        keywords="お問い合わせ,相談,無料相談,海外移住相談,AIコンサルティング相談,ビジネス相談,LINE相談,メール相談"
+        structuredData={structuredData}
+      />
       <Header />
 
       {/* Hero Section */}

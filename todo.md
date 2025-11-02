@@ -220,3 +220,29 @@
 - [x] レスポンシブCSSがロゴに影響していないか確認する
 - [x] ロゴサイズを適切なサイズに修正する
 - [x] 動作確認を行う
+
+## サイト軽量化とSEO・MEO・AIO・LLMO対策
+### 画像の最適化
+- [x] 画像に遅延読み込み（lazy loading）を実装する
+- [x] 画像にwidth/height属性を追加してCLSを防ぐ
+
+### SEO対策
+- [x] 各ページにメタタグ（title、description、keywords）を追加する
+- [x] 構造化データ（JSON-LD）を追加する
+- [x] OGPタグを追加する
+- [x] robots.txtを作成する
+- [x] sitemap.xmlを作成する
+
+### MEO対策
+- [x] ビジネス情報の構造化データを追加する（HomeページにProfessionalService構造化データを追加）
+- [x] 地域キーワードを最適化する（カナダ、メキシコ、ジョージアなどの国名をkeywordsに追加）
+
+### AIO・LLMO対策
+- [x] AI検索エンジン向けのメタデータを追加する（robots.txtにGPTBot、Claude-Web、PerplexityBotなどを許可）
+- [x] FAQ構造を最適化する（ContactページにFAQPage構造化データを追加）
+- [x] 見出し構造を最適化する（各ページに明確な見出し階層を実装済み）
+
+### パフォーマンス最適化
+- [x] フォントの最適化（preload、font-display）
+- [ ] CSSの最適化
+- [ ] 不要なコードの削除

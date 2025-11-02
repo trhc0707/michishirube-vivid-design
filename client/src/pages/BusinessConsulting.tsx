@@ -2,6 +2,7 @@ import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
@@ -13,6 +14,19 @@ export default function BusinessConsulting() {
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "ビジネス/マーケティングコンサルティング - MichiShirube OÜ",
+    "description": "AIサービスとマーケティングサービスを統合したビジネスコンサルティング",
+    "provider": {
+      "@type": "Organization",
+      "name": "MichiShirube OÜ"
+    },
+    "serviceType": "Business and Marketing Consulting",
+    "areaServed": ["JP", "Global"]
+  };
 
   const aiServices = [
     {
@@ -90,6 +104,12 @@ export default function BusinessConsulting() {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead
+        title="ビジネス/マーケティングコンサルティング - MichiShirube OÜ | AI×マーケティング"
+        description="AIサービス（コンサルティング、研修、開発、導入）とマーケティングサービス（LINE構築、SNS運用、HP制作、LP制作、MEO対策、広告運用）を統合したビジネスコンサルティング。企業の成長を包括的にサポート。"
+        keywords="ビジネスコンサルティング,マーケティングコンサルティング,AIコンサルティング,LINE構築,SNS運用,ホームページ制作,LP制作,MEO対策,広告運用,DX推進,集客支援"
+        structuredData={structuredData}
+      />
       <Header />
       
       {/* Hero Section */}
