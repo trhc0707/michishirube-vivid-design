@@ -9,6 +9,7 @@ export default function Header() {
     { name: "SERVICE", color: "#FF8C00", href: "/#service" },
     { name: "ABOUT", color: "#4169E1", href: "/#about" },
     { name: "RESOURCES", color: "#32CD32", href: "/resources" },
+    { name: "BLOG", color: "#9370DB", href: "https://note.com/takuma_canada", external: true },
     { name: "CONTACT", color: "#FF6347", href: "/contact" },
   ];
 
@@ -46,6 +47,7 @@ export default function Header() {
               key={item.name}
               href={item.href}
               className="flex flex-col items-center gap-2 group"
+              {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
             >
               {/* Colored line above text */}
               <div 
@@ -73,6 +75,7 @@ export default function Header() {
                 href={item.href}
                 className="block px-4 py-3 text-white hover:bg-white/10 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
+                {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               >
                 {item.name}
               </a>
