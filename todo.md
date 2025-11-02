@@ -284,3 +284,9 @@
 - [x] ヒーローセクションを参照サイトの内容に更新する（「家族との時間を最優先にする、新しい働き方。海外で稼ぐ「AI時代のWebスキル」」に変更）
 - [x] ページタイトルとセクションタイトルを海外移住後収入構築サポートに変更する（RelocationProblemsSection、RelocationFeaturesSectionを新規作成）
 - [x] ProblemsセクションとFeaturesセクションのタイトルを参照サイトに合わせる（「3つの罠」「4つのスキル」に変更）
+
+## /relocation-income-supportページの残りのセクション更新
+- [x] ResultsSectionを参照サイトの「プログラムの特徴」に更新する（RelocationResultsSectionを新規作成）
+- [x] TestimonialsSectionを参照サイトの「受講者の声」に更新する（既に更新済み）
+- [x] FlowSectionを参照サイトの「受講の流れ」に更新する（RelocationFlowSectionを新規作成）
+- [x] ContactSectionを参照サイトの内容に更新する（共通コンポーネントをそのまま使用）
