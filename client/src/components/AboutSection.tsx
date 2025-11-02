@@ -78,7 +78,44 @@ export default function AboutSection() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+          {/* CEO Message Excerpt */}
+          <div className="mt-16 max-w-4xl mx-auto">
+            <div className="bg-white border-2 border-gray-200 p-8 md:p-12">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-1 h-12 bg-black"></div>
+                <div>
+                  <p className="text-sm text-gray-500 font-semibold">CEO Message</p>
+                  <p className="text-xl font-bold">代表メッセージ</p>
+                </div>
+              </div>
+              <div className="space-y-4 text-gray-700 leading-relaxed">
+                <p>
+                  私は15歳でオーストラリアに単身留学し、以来4カ国で11年間生活してきました。現在は妻と3人の子どもとともに、ノマドファミリーとして世界を旅しながら、MichiShirube OÜを経営しています。
+                </p>
+                <p>
+                  フランス人の開発パートナーと協業しながら、4言語で世界中のAIニュースを毎日収集し、海外の最先端事例を日本市場に適応させています。私たちのミッションは、「あなたの生き方、好き！」と思ってもらえる人生を、一人でも多くの方に実現していただくことです。
+                </p>
+                <p className="text-sm text-gray-500 italic">
+                  700名以上の方々と個別相談を重ね、70名以上を実際に海外でサポートしてきた経験から、皆さまの夢の実現を全力でサポートいたします。
+                </p>
+              </div>
+              <div className="mt-6 pt-6 border-t border-gray-200 flex items-center justify-between">
+                <div>
+                  <p className="text-sm text-gray-500">代表取締役</p>
+                  <p className="text-lg font-bold">今村拓真</p>
+                </div>
+                <Button 
+                  variant="outline"
+                  className="border-black text-black hover:bg-black hover:text-white"
+                  onClick={() => setLocation("/about-us")}
+                >
+                  詳しく見る →
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto mt-12">
             <Button 
               className="bg-[#333333] hover:bg-[#1a1a1a] text-white py-6 text-lg"
               onClick={() => setLocation("/about-us")}
