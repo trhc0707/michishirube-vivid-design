@@ -152,32 +152,34 @@ export default function ContactSection() {
             </div>
 
             {/* 送信ボタン */}
-            <div className="space-y-4">
-              <Button
-                type="submit"
-                size="lg"
-                className="w-full text-lg font-bold py-6"
-                style={{ background: "linear-gradient(135deg, rgb(255, 107, 74) 0%, rgb(255, 140, 100) 100%)" }}
-              >
-                無料相談を申し込む
-              </Button>
-              <Link href="/contact">
-                <Button
-                  type="button"
-                  size="lg"
-                  variant="outline"
-                  className="w-full text-lg font-bold py-6 border-2"
-                >
-                  お問い合わせページへ
-                </Button>
-              </Link>
-            </div>
+            <Button
+              type="submit"
+              size="lg"
+              className="w-full text-lg font-bold py-6"
+              style={{ background: "linear-gradient(135deg, rgb(255, 107, 74) 0%, rgb(255, 140, 100) 100%)" }}
+            >
+              無料相談を申し込む
+            </Button>
           </form>
 
           {/* 注釈 */}
           <p className="text-center text-sm text-gray-600 mt-6">
             ※ 3営業日以内に担当者よりご連絡いたします
           </p>
+
+          {/* お問い合わせページへのリンク */}
+          <div className="mt-8 text-center">
+            <Link href="/contact">
+              <Button
+                type="button"
+                size="lg"
+                variant="outline"
+                className="text-lg font-bold py-6 px-12 border-2"
+              >
+                お問い合わせページへ
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

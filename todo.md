@@ -305,3 +305,6 @@
 
 ## TestimonialsSectionの内容更新
 - [x] TestimonialsSectionをAI導入から海外移住後収入構築サポートの受講者の声に変更する（RelocationTestimonialsSectionを新規作成、カナダ、メキシコ、ジョージア、タイ移住の事例を追加）
+
+## ContactSectionのボタン配置修正
+- [x] お問い合わせボタンをセクションの下部に配置して、誤クリックを防ぐ（フォームの外、注釈の下に移動）
