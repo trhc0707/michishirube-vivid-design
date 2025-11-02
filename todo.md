@@ -333,3 +333,12 @@
 - [x] design-templateのデザインを再確認する
 - [x] 各セクションのデザインをdesign-templateと完全に一致させる（Hero、Problems、Features、Results、Testimonials、Flowセクションを修正）
 - [x] 色、フォント、レイアウト、スペーシングを統一する（rgb(59, 89, 152)、heading-section、card-shadowなどを適用）
+
+## /overseas-communityページをdesign-templateと100%同じデザインにする
+- [ ] design-templateの各セクションを詳細に確認する（HTML構造、クラス名、スタイル）
+- [ ] OverseasCommunityHeroSectionを100%同じにする
+- [ ] CommunityProblemsSectionを100%同じにする
+- [ ] CommunityFeaturesSectionを100%同じにする
+- [ ] CommunityResultsSectionを100%同じにする
+- [ ] CommunityTestimonialsSectionを100%同じにする
+- [ ] CommunityFlowSectionを100%同じにする

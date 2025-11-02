@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 
 export default function OverseasCommunityHeroSection() {
-  const handleCTAClick = () => {
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
+  const scrollToContact = () => {
+    const element = document.getElementById("contact");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -16,79 +16,80 @@ export default function OverseasCommunityHeroSection() {
       <div className="container">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* 左側コンテンツ */}
-          <div className="text-white">
+          <div className="text-white" data-aos="fade-up">
             {/* バッジ */}
             <div className="inline-block bg-white text-gray-800 px-6 py-2 rounded-full text-sm mb-6">
-              800+人のメンバーと共に、海外移住を成功させる
+              一人で悩まない、みんなで実現する海外移住
             </div>
 
             {/* 見出し */}
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 md:mb-6">
-              海外移住を目指す仲間とつながる
+              移住に、仲間を。
             </h1>
 
             {/* 説明文 */}
             <div className="text-base md:text-lg lg:text-xl mb-6 md:mb-8 space-y-1 md:space-y-2">
-              <p>情報交換、相談、現地情報の共有など、</p>
-              <p>移住を成功させるためのネットワークを提供します。</p>
-              <p>50カ国以上の移住先情報が手に入る</p>
+              <p>「一人で」海外移住を目指しても不安は消えない。</p>
+              <p>800人以上のメンバーと50カ国以上の移住先情報を活用し、</p>
+              <p>あなたの理想の海外生活をサポート</p>
             </div>
 
             {/* 統計サークル */}
             <div className="flex gap-3 md:gap-6 mb-6 md:mb-8">
               {[
-                { label: "メンバー", value: "800", unit: "+" },
+                { label: "メンバー数", value: "800", unit: "+" },
                 { label: "移住先国", value: "50", unit: "+" },
-                { label: "成功率", value: "93", unit: "%" },
+                { label: "移住成功率", value: "93", unit: "%" },
               ].map((stat, index) => (
                 <div
                   key={index}
                   className="flex flex-col items-center justify-center w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36 rounded-full border-2 md:border-4 border-white"
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 100}
                 >
                   <div className="text-[10px] md:text-xs lg:text-sm mb-1">{stat.label}</div>
-                  <div className="text-lg md:text-2xl lg:text-4xl font-bold">
+                  <div className="text-xl md:text-3xl lg:text-4xl font-bold">
                     {stat.value}
-                    <span className="text-xs md:text-sm lg:text-lg">{stat.unit}</span>
+                    <span className="text-sm md:text-xl lg:text-2xl">{stat.unit}</span>
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* CTA */}
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+            {/* CTAボタン */}
+            <div className="relative inline-block" data-aos="fade-up" data-aos-delay="300">
+              <div className="absolute -top-6 md:-top-8 left-1/2 -translate-x-1/2 bg-white text-gray-800 px-3 md:px-4 py-1 rounded-full text-xs md:text-sm whitespace-nowrap">
+                いますぐ！
+              </div>
               <Button
                 size="lg"
-                className="bg-white text-gray-900 hover:bg-gray-100 px-6 md:px-8 py-4 md:py-6 text-base md:text-lg shadow-xl relative overflow-hidden group"
-                onClick={handleCTAClick}
+                className="text-base md:text-lg px-6 md:px-8 py-4 md:py-6 font-bold"
+                style={{ backgroundColor: "rgb(255, 107, 74)" }}
+                onClick={scrollToContact}
               >
-                <span className="relative z-10">無料で参加する</span>
-                <span className="ml-2 bg-gray-900 text-white px-2 py-1 rounded text-xs md:text-sm relative z-10">
-                  いますぐ！
-                </span>
-                <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                無料で参加する！
               </Button>
             </div>
           </div>
 
           {/* 右側イラスト */}
-          <div className="relative">
-            <div className="aspect-square relative">
-              <div className="absolute inset-0 bg-white/10 backdrop-blur-sm rounded-3xl flex items-center justify-center">
-                <div className="text-center text-white">
-                  <div className="text-6xl md:text-8xl font-bold mb-4">800+</div>
-                  <div className="text-xl md:text-2xl">Active Members</div>
-                </div>
-              </div>
+          <div className="hidden md:block" data-aos="fade-left">
+            <div className="rounded-2xl overflow-hidden border-orange" style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}>
+              <img 
+                src="/dashboard-hero.png" 
+                alt="コミュニティイメージ" 
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </div>
       </div>
 
-      {/* Wave Bottom */}
-      <div className="absolute bottom-0 left-0 right-0 wave-bottom">
-        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 0L60 10C120 20 240 40 360 46.7C480 53 600 47 720 43.3C840 40 960 40 1080 46.7C1200 53 1320 67 1380 73.3L1440 80V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V0Z" fill="white"/>
-        </svg>
+      {/* 注釈 */}
+      <div className="absolute bottom-16 md:bottom-20 right-4 md:right-8 text-white text-[10px] md:text-xs max-w-[200px] md:max-w-xs text-right">
+        <p>*2024年度コミュニティ統計による</p>
+        <p>*参加後12ヶ月以内の移住成功率</p>
+        <p>*定期勉強会とメンバーサポートによる成功率</p>
       </div>
     </section>
   );
