@@ -304,3 +304,14 @@
 a[href*="manus.im"] {
   display: none !important;
 }
+
+/* Hide Manus branding iframe in bottom right */
+iframe[src*="manus"] {
+  display: none !important;
+}
+
+/* Additional fallback to hide any fixed position iframe in bottom right */
+iframe[style*="position: fixed"][style*="bottom"],
+iframe[style*="position:fixed"][style*="bottom"] {
+  display: none !important;
+}

@@ -203,3 +203,8 @@
 ## 「Made with Manus」を非表示にする
 - [x] index.cssに「Made with Manus」を非表示にするCSSを追加する
 - [x] 動作確認を行う
+
+## 画面右下の「Made with Manus」を非表示にする
+- [x] ブラウザで画面右下の要素を確認する
+- [x] iframe要素をCSSで非表示にする
+- [x] 動作確認を行う
