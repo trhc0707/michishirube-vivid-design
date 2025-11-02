@@ -46,7 +46,8 @@ export default function OverseasRelocation() {
         {
           title: "海外移住後収入構築サポート",
           description: "移住後の収入源を確保するためのサポート。オンラインビジネス、フリーランス、現地就職など、様々な選択肢を提案します。",
-          features: ["オンラインビジネス構築", "フリーランス支援", "現地就職サポート", "収入多様化戦略"]
+          features: ["オンラインビジネス構築", "フリーランス支援", "現地就職サポート", "収入多様化戦略"],
+          link: "/relocation-income-support"
         },
         {
           title: "海外移住コミュニティ",
@@ -153,7 +154,7 @@ export default function OverseasRelocation() {
                         <p className="text-gray-600 text-sm mb-6 leading-relaxed">
                           {service.description}
                         </p>
-                        <ul className="space-y-2">
+                        <ul className="space-y-2 mb-6">
                           {service.features.map((feature, idx) => (
                             <li key={idx} className="flex items-start text-sm">
                               <span className="text-black font-bold mr-2">•</span>
@@ -161,6 +162,14 @@ export default function OverseasRelocation() {
                             </li>
                           ))}
                         </ul>
+                        {service.link && (
+                          <Button
+                            className="w-full bg-[#333333] hover:bg-[#1a1a1a] text-white"
+                            onClick={() => setLocation(service.link)}
+                          >
+                            詳しく見る →
+                          </Button>
+                        )}
                       </motion.div>
                     ))}
                   </div>
