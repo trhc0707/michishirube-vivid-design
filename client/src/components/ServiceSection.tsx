@@ -35,7 +35,7 @@ export default function ServiceSection() {
         { name: "海外移住個別相談" },
         { name: "ノマドビザ取得サポート" },
         { name: "海外移住コミュニティ" },
-        { name: "海外移住後収入構築サポート" },
+        { name: "海外移住後収入構築サポート", link: "/relocation-income-support" },
       ],
       link: "/overseas-relocation"
     },

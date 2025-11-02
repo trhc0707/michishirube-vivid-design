@@ -11,6 +11,7 @@ import AboutUs from "./pages/AboutUs";
 import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
 import AIServices from "./pages/AIServices";
+import RelocationIncomeSupport from "./pages/RelocationIncomeSupport";
 
 function Router() {
   return (
@@ -22,6 +23,7 @@ function Router() {
       <Route path="/resources" component={Resources} />
       <Route path="/contact" component={Contact} />
       <Route path="/ai-services" component={AIServices} />
+      <Route path="/relocation-income-support" component={RelocationIncomeSupport} />
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
