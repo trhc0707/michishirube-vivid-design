@@ -290,3 +290,7 @@
 - [x] TestimonialsSectionを参照サイトの「受講者の声」に更新する（既に更新済み）
 - [x] FlowSectionを参照サイトの「受講の流れ」に更新する（RelocationFlowSectionを新規作成）
 - [x] ContactSectionを参照サイトの内容に更新する（共通コンポーネントをそのまま使用）
+
+## /relocation-income-supportページのHeroデザインをdesign-templateと同じにする
+- [x] design-template.zipの内容を確認する
+- [x] design-templateのHeroデザインを/relocation-income-supportページに適用する（左側コンテンツ、統計サークル、CTAボタン、右側イラストのレイアウトを適用）
