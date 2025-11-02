@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useState } from "react";
 import { toast } from "sonner";
+import { Link } from "wouter";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -151,14 +152,26 @@ export default function ContactSection() {
             </div>
 
             {/* 送信ボタン */}
-            <Button
-              type="submit"
-              size="lg"
-              className="w-full text-lg font-bold py-6"
-              style={{ background: "linear-gradient(135deg, rgb(255, 107, 74) 0%, rgb(255, 140, 100) 100%)" }}
-            >
-              無料相談を申し込む
-            </Button>
+            <div className="space-y-4">
+              <Button
+                type="submit"
+                size="lg"
+                className="w-full text-lg font-bold py-6"
+                style={{ background: "linear-gradient(135deg, rgb(255, 107, 74) 0%, rgb(255, 140, 100) 100%)" }}
+              >
+                無料相談を申し込む
+              </Button>
+              <Link href="/contact">
+                <Button
+                  type="button"
+                  size="lg"
+                  variant="outline"
+                  className="w-full text-lg font-bold py-6 border-2"
+                >
+                  お問い合わせページへ
+                </Button>
+              </Link>
+            </div>
           </form>
 
           {/* 注釈 */}

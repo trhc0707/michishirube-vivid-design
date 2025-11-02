@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "wouter";
 
 export default function CTASection() {
   const [isVisible, setIsVisible] = useState(true);
@@ -42,21 +43,23 @@ export default function CTASection() {
         </div>
 
         {/* Contact CTA */}
-        <div id="contact" className="relative h-96 md:h-[500px] overflow-hidden group cursor-pointer">
-          <div
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=2070')",
-            }}
-          ></div>
-          <div className="absolute inset-0 bg-[#2d3748]/70 group-hover:bg-[#2d3748]/60 transition-colors"></div>
-          <div className="relative h-full flex flex-col items-center justify-center text-white p-8">
-            <h3 className="text-4xl md:text-5xl font-bold mb-4">お問い合わせ</h3>
-            <p className="text-xl mb-6">お気軽にご連絡ください</p>
-            <div className="text-6xl">→→→</div>
+        <Link href="/contact">
+          <div id="contact" className="relative h-96 md:h-[500px] overflow-hidden group cursor-pointer">
+            <div
+              className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+              style={{
+                backgroundImage:
+                  "url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=2070')",
+              }}
+            ></div>
+            <div className="absolute inset-0 bg-[#2d3748]/70 group-hover:bg-[#2d3748]/60 transition-colors"></div>
+            <div className="relative h-full flex flex-col items-center justify-center text-white p-8">
+              <h3 className="text-4xl md:text-5xl font-bold mb-4">お問い合わせ</h3>
+              <p className="text-xl mb-6">お気軽にご連絡ください</p>
+              <div className="text-6xl">→→→</div>
+            </div>
           </div>
-        </div>
+        </Link>
       </div>
     </section>
   );
