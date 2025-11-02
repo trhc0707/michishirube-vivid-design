@@ -77,7 +77,7 @@ export default function ServiceSection() {
               サービス一覧
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto mb-16">
-              革新的な技術ソリューションと独自のアプローチで、お客様一人ひとりに特別な体験を提供します。
+              Innovative solutions and unique approaches to deliver exceptional experiences for every client.
             </p>
           </div>
 

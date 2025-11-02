@@ -314,3 +314,7 @@
 
 ## ServiceSectionへのボタン追加
 - [x] 各サービスカードにリンク先がわかるようにボタンを追加する（「詳しく見る」ボタンをカード下部に追加）
+
+## ServiceSectionとAboutSectionの説明文を英語に変更
+- [x] ServiceSectionの説明文を自然な英語に変更する（"Innovative solutions and unique approaches..."）
+- [x] AboutSectionの説明文を自然な英語に変更する（"specializes in overseas relocation and business consulting..."）

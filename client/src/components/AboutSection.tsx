@@ -37,7 +37,7 @@ export default function AboutSection() {
             <p className="text-sm text-gray-600 mb-2">私たちについて</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-8">会社概要</h2>
             <p className="text-gray-600 max-w-3xl mx-auto mb-16">
-              MichiShirube OÜは、海外移住とビジネスコンサルティングを専門とする企業です。世界中のクライアントに、新しい生活とビジネスの可能性を提供しています。
+              MichiShirube OÜ specializes in overseas relocation and business consulting, empowering clients worldwide with new opportunities for life and business.
             </p>
           </div>
 
