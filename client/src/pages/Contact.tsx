@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { useState } from "react";
 import { toast } from "sonner";
+import FAQSection from "@/components/FAQSection";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -76,6 +77,9 @@ export default function Contact() {
           </motion.div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQSection />
 
       {/* Contact Methods Section */}
       <section className="relative py-20 bg-gray-50">
