@@ -342,3 +342,10 @@
 - [ ] CommunityResultsSectionを100%同じにする
 - [ ] CommunityTestimonialsSectionを100%同じにする
 - [ ] CommunityFlowSectionを100%同じにする
+
+## /overseas-communityページをdesign-templateと完全に同じにする（徹底修正）
+- [x] すべてのセクションのHTML構造を完全に一致させる
+- [x] すべてのdata-aos属性を完全に一致させる
+- [x] すべてのクラス名を完全に一致させる
+- [x] すべての色、フォントサイズ、スペーシングを完全に一致させる
+- [x] Features、Results、Testimonials、Flowセクションを修正する（全てdesign-templateと同じ構造に変更完了）

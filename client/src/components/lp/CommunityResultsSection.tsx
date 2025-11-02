@@ -37,7 +37,7 @@ export default function CommunityResultsSection() {
       <div className="container">
         <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12">
           {/* 見出し */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-12" data-aos="fade-up">
             <h2 className="heading-section text-white">
               コミュニティで得られる<span className="text-6xl">4</span>つの効果
             </h2>
@@ -51,17 +51,26 @@ export default function CommunityResultsSection() {
                 <div
                   key={index}
                   className="bg-white rounded-2xl p-6 text-center"
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 100}
                 >
                   {/* アイコン */}
                   <Icon className="w-12 h-12 mx-auto mb-4" style={{ color: "rgb(59, 89, 152)" }} />
 
                   {/* ラベル */}
-                  <div className="text-sm text-gray-600 mb-2">{result.label}</div>
+                  <p className="text-sm mb-2" style={{ color: "rgb(59, 89, 152)" }}>
+                    {result.label}
+                  </p>
 
-                  {/* 数値 */}
-                  <div className="text-4xl font-bold mb-3" style={{ color: "rgb(59, 89, 152)" }}>
-                    {result.value}
-                    <span className="text-2xl">{result.unit}</span>
+                  {/* 数字 */}
+                  <div className="mb-3">
+                    <span
+                      className="text-5xl md:text-6xl font-bold highlight-yellow inline-block"
+                      style={{ color: "rgb(255, 107, 74)" }}
+                    >
+                      {result.value}
+                    </span>
+                    <span className="text-xl font-bold ml-1">{result.unit}</span>
                   </div>
 
                   {/* 説明 */}

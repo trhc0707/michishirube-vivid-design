@@ -38,7 +38,7 @@ export default function CommunityFeaturesSection() {
     <section id="features" className="section-spacing">
       <div className="container">
         {/* 見出し */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <p className="text-lg mb-2" style={{ color: "rgb(59, 89, 152)" }}>
             移住を成功に導く
           </p>
@@ -61,6 +61,7 @@ export default function CommunityFeaturesSection() {
               {/* テキスト */}
               <div
                 className={`relative ${index % 2 === 1 ? "md:order-2" : ""}`}
+                data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
               >
                 {/* 背景番号 */}
                 <div
@@ -81,13 +82,37 @@ export default function CommunityFeaturesSection() {
               </div>
 
               {/* 画像 */}
-              <div className={index % 2 === 1 ? "md:order-1" : ""}>
-                <div className={`rounded-2xl ${feature.borderColor} overflow-hidden card-shadow`}>
-                  <img src={feature.icon} alt={feature.title} className="w-full h-auto" />
-                </div>
+              <div
+                className={index % 2 === 1 ? "md:order-1" : ""}
+                data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
+              >
+              <div className={`rounded-2xl ${feature.borderColor} overflow-hidden bg-gray-50`}>
+                <img src={feature.icon} alt={feature.highlight} className="w-full h-full object-cover" />
+              </div>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* 説明カード */}
+        <div className="grid md:grid-cols-2 gap-8 mt-24">
+          <div className="bg-white rounded-2xl p-8 card-shadow" data-aos="fade-up">
+            <h3 className="heading-card mb-4">
+              <span style={{ color: "rgb(255, 107, 74)" }}>海外移住</span>コミュニティとは
+            </h3>
+            <p className="text-gray-700">
+              移住を目指す仲間と情報交換し、優先順位を分析。小さな一歩から段階的に準備することで、失敗リスクを最小限に抑えながら、確実に移住を実現するコミュニティです。
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl p-8 card-shadow" data-aos="fade-up" data-aos-delay="100">
+            <h3 className="heading-card mb-4">
+              なぜ<span style={{ color: "rgb(255, 107, 74)" }}>成功率</span>が高いのか
+            </h3>
+            <p className="text-gray-700">
+              海外の最新移住情報を取り入れつつ、日本人の文化にフィット。英語・フランス語・スペイン語・日本語で情報収集し、グローバルな視点で最適な移住計画を設計します。
+            </p>
+          </div>
         </div>
       </div>
     </section>
