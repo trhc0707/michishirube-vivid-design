@@ -78,9 +78,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <FAQSection />
-
       {/* Contact Methods Section */}
       <section className="relative py-20 bg-gray-50">
         <div className="absolute inset-0 opacity-5 pointer-events-none">
@@ -266,6 +263,9 @@ export default function Contact() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQSection />
 
       {/* Company Info Section */}
       <section className="relative py-20 bg-white">
