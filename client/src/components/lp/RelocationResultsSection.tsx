@@ -1,107 +1,83 @@
+import { Laptop, Globe, TrendingUp, Users } from "lucide-react";
+
 export default function RelocationResultsSection() {
-  const features = [
+  const results = [
     {
-      title: "最先端のAIノウハウ",
-      description: "フランス人のパートナーと共同開発してる、最先端のAIノウハウを学べます。他の人が10時間かけてやる作業を、1時間で終わらせられるようになります。",
-      icon: "🤖"
+      icon: Users,
+      label: "相談実績",
+      value: "800",
+      unit: "+",
+      description: "すでに800人以上が相談し、海外移住後の収入構築に成功しています。",
     },
     {
-      title: "完全オンライン完結",
-      description: "すべてオンラインで完結するので、世界中どこからでも受講可能。移住前から準備を始めることもできます。",
-      icon: "🌍"
+      icon: TrendingUp,
+      label: "成果達成率",
+      value: "93",
+      unit: "%",
+      description: "6ヶ月以内に具体的な成果を実現。高い成功率を誇ります。",
     },
     {
-      title: "個別サポート体制",
-      description: "グループレッスンではなく、あなた専用の個別サポート。あなたのペースで、あなたの目標に合わせて進められます。",
-      icon: "👥"
+      icon: Laptop,
+      label: "収入向上",
+      value: "3.2",
+      unit: "倍",
+      description: "受講開始から6ヶ月後、平均3.2倍の収入向上を達成しています。",
     },
     {
-      title: "実践的なカリキュラム",
-      description: "理論だけでなく、実際に案件を取って稼ぐところまでサポート。「学んだけど稼げない」という状態にはさせません。",
-      icon: "💼"
+      icon: Globe,
+      label: "作業時間削減",
+      value: "90",
+      unit: "%",
+      description: "AI活用で作業時間を大幅に削減。家族との時間を最優先にできます。",
     },
-    {
-      title: "継続的なアップデート",
-      description: "AIの進化は日進月歩。常に最新のノウハウをアップデートし、受講生に提供し続けます。",
-      icon: "🔄"
-    },
-    {
-      title: "コミュニティサポート",
-      description: "同じ目標を持つ仲間とのコミュニティで、情報交換やモチベーション維持ができます。",
-      icon: "🤝"
-    }
   ];
 
   return (
-    <section id="results" className="section-spacing bg-gray-50">
+    <section className="section-spacing" style={{ background: "linear-gradient(135deg, rgb(59, 89, 152) 0%, rgb(45, 70, 120) 100%)" }}>
       <div className="container">
-        {/* 見出し */}
-        <div className="text-center mb-16" data-aos="fade-up">
-          <div className="relative inline-block">
-            <div
-              className="absolute inset-0 opacity-10 text-9xl font-black text-gray-300"
-              style={{ top: "-2rem", left: "50%", transform: "translateX(-50%)" }}
-            >
-              FEATURES
-            </div>
-            <h2 className="heading-section relative z-10">
-              <span style={{ color: "rgb(59, 89, 152)" }}>プログラムの</span>
-              <br />
-              <span style={{ color: "rgb(59, 89, 152)" }}>
-                <span style={{ color: "rgb(255, 107, 74)" }} className="text-6xl">6</span>
-                つの特徴
-              </span>
+        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12">
+          {/* 見出し */}
+          <div className="text-center mb-12" data-aos="fade-up">
+            <h2 className="heading-section text-white">
+              プログラムで得られる<span className="text-6xl">4</span>つの成果
             </h2>
           </div>
-        </div>
 
-        {/* グリッド */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl p-8 card-shadow"
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-            >
-              <div className="text-6xl mb-4">{feature.icon}</div>
-              <h3 className="heading-card mb-4">
-                <span style={{ color: "rgb(59, 89, 152)" }}>{feature.title}</span>
-              </h3>
-              <p className="text-gray-700">{feature.description}</p>
-            </div>
-          ))}
-        </div>
+          {/* 4カラムグリッド */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {results.map((result, index) => {
+              const Icon = result.icon;
+              return (
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl p-6 text-center"
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 100}
+                >
+                  {/* アイコン */}
+                  <Icon className="w-12 h-12 mx-auto mb-4" style={{ color: "rgb(59, 89, 152)" }} />
 
-        {/* 実績数値 */}
-        <div className="mt-16 grid md:grid-cols-4 gap-8" data-aos="fade-up">
-          <div className="text-center">
-            <div className="text-5xl font-black mb-2" style={{ color: "rgb(255, 107, 74)" }}>
-              800+
-            </div>
-            <div className="text-sm text-gray-600">相談実績</div>
-            <div className="text-xs text-gray-500 mt-1">すでに800人以上が相談済み</div>
-          </div>
-          <div className="text-center">
-            <div className="text-5xl font-black mb-2" style={{ color: "rgb(255, 107, 74)" }}>
-              93%
-            </div>
-            <div className="text-sm text-gray-600">成果達成率</div>
-            <div className="text-xs text-gray-500 mt-1">6ヶ月以内に具体的な成果を実現</div>
-          </div>
-          <div className="text-center">
-            <div className="text-5xl font-black mb-2" style={{ color: "rgb(255, 107, 74)" }}>
-              3.2倍
-            </div>
-            <div className="text-sm text-gray-600">平均収入向上</div>
-            <div className="text-xs text-gray-500 mt-1">受講開始から6ヶ月後</div>
-          </div>
-          <div className="text-center">
-            <div className="text-5xl font-black mb-2" style={{ color: "rgb(255, 107, 74)" }}>
-              90%
-            </div>
-            <div className="text-sm text-gray-600">作業時間削減</div>
-            <div className="text-xs text-gray-500 mt-1">AI活用で効率化</div>
+                  {/* ラベル */}
+                  <p className="text-sm mb-2" style={{ color: "rgb(59, 89, 152)" }}>
+                    {result.label}
+                  </p>
+
+                  {/* 数字 */}
+                  <div className="mb-3">
+                    <span
+                      className="text-5xl md:text-6xl font-bold highlight-yellow inline-block"
+                      style={{ color: "rgb(255, 107, 74)" }}
+                    >
+                      {result.value}
+                    </span>
+                    <span className="text-xl font-bold ml-1">{result.unit}</span>
+                  </div>
+
+                  {/* 説明 */}
+                  <p className="text-sm text-gray-700">{result.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

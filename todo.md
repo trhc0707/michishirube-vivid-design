@@ -294,3 +294,11 @@
 ## /relocation-income-supportページのHeroデザインをdesign-templateと同じにする
 - [x] design-template.zipの内容を確認する
 - [x] design-templateのHeroデザインを/relocation-income-supportページに適用する（左側コンテンツ、統計サークル、CTAボタン、右側イラストのレイアウトを適用）
+
+## /relocation-income-supportページ全体のデザイン・トンマナ統一
+- [x] design-templateの各セクションデザインを確認する
+- [x] RelocationProblemsSectionをdesign-templateのデザインに統一する（border-purple/orange/greenを追加）
+- [x] RelocationFeaturesSectionをdesign-templateのデザインに統一する（交互レイアウト、背景番号、highlightテキストを追加）
+- [x] RelocationResultsSectionをdesign-templateのデザインに統一する（lucide-reactアイコン、グラデーション背景、backdrop-blurを追加）
+- [x] RelocationFlowSectionをdesign-templateのデザインに統一する（上部バッジ、STEP番号、矢印、lucide-reactアイコンを追加）
+- [x] すべてのセクションから絵文字を削除する（lucide-reactアイコンに置き換え）
