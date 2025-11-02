@@ -55,9 +55,10 @@ export default function HeroSection() {
           {[...newsItems, ...newsItems].map((news, index) => (
             <span
               key={index}
-              className="inline-block px-8 text-sm font-medium text-gray-800"
+              className="inline-block px-12 text-sm font-medium text-gray-800"
             >
               {news}
+              <span className="mx-4 text-gray-400">|</span>
             </span>
           ))}
         </div>
