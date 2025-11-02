@@ -322,3 +322,9 @@
 ## 見出し上のラベルを英語に変更
 - [x] ServiceSectionの「私たちのサービス」を英語に変更する（"Our Services"）
 - [x] AboutSectionの「私たちについて」を英語に変更する（"About Us"）
+
+## 海外移住コミュニティの詳細ページ作成
+- [x] OverseasRelocationページの海外移住コミュニティにボタンを追加する（linkプロパティを追加）
+- [x] 海外移住コミュニティの詳細ページ（/overseas-community）を作成する
+- [x] design-templateと同じデザイン・トンマナでLPを作成する（Hero、Problems、Features、Results、Testimonials、Flowセクションを作成）
+- [x] ルーティングを設定する（App.tsxにルートを追加）

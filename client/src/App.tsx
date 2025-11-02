@@ -12,6 +12,7 @@ import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
 import AIServices from "./pages/AIServices";
 import RelocationIncomeSupport from "./pages/RelocationIncomeSupport";
+import OverseasCommunity from "./pages/OverseasCommunity";
 import { useEffect } from "react";
 
 function ScrollToTop() {
@@ -36,7 +37,8 @@ function Router() {
         <Route path="/resources" component={Resources} />
         <Route path="/contact" component={Contact} />
         <Route path="/ai-services" component={AIServices} />
-        <Route path="/relocation-income-support" component={RelocationIncomeSupport} />
+      <Route path={"/relocation-income-support"} component={RelocationIncomeSupport} />
+      <Route path={"/overseas-community"} component={OverseasCommunity} />
         <Route path="/404" component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />

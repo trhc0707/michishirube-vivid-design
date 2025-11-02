@@ -52,7 +52,8 @@ export default function OverseasRelocation() {
         {
           title: "海外移住コミュニティ",
           description: "海外移住を目指す仲間とつながるコミュニティ。情報交換、相談、現地情報の共有など、移住を成功させるためのネットワークを提供します。",
-          features: ["オンラインコミュニティ", "定期勉強会", "現地情報共有", "メンバー限定イベント"]
+          features: ["オンラインコミュニティ", "定期勉強会", "現地情報共有", "メンバー限定イベント"],
+          link: "/overseas-community"
         }
       ]
     },
@@ -162,10 +163,10 @@ export default function OverseasRelocation() {
                             </li>
                           ))}
                         </ul>
-                        {service.link && (
+                        {(service as any).link && (
                           <Button
                             className="w-full bg-[#333333] hover:bg-[#1a1a1a] text-white"
-                            onClick={() => setLocation(service.link)}
+                            onClick={() => setLocation((service as any).link)}
                           >
                             詳しく見る →
                           </Button>
