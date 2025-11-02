@@ -50,15 +50,15 @@ export default function HeroSection() {
       </div>
 
       {/* News Ticker */}
-      <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm py-4 overflow-hidden z-10">
-        <div className="flex animate-marquee">
+      <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm py-3 overflow-hidden z-10">
+        <div className="flex animate-marquee whitespace-nowrap">
           {[...newsItems, ...newsItems].map((news, index) => (
-            <div
+            <span
               key={index}
-              className="flex-shrink-0 px-8 text-sm font-medium text-gray-800"
+              className="inline-block px-8 text-sm font-medium text-gray-800"
             >
               {news}
-            </div>
+            </span>
           ))}
         </div>
       </div>
