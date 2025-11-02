@@ -302,3 +302,6 @@
 - [x] RelocationResultsSectionをdesign-templateのデザインに統一する（lucide-reactアイコン、グラデーション背景、backdrop-blurを追加）
 - [x] RelocationFlowSectionをdesign-templateのデザインに統一する（上部バッジ、STEP番号、矢印、lucide-reactアイコンを追加）
 - [x] すべてのセクションから絵文字を削除する（lucide-reactアイコンに置き換え）
+
+## TestimonialsSectionの内容更新
+- [x] TestimonialsSectionをAI導入から海外移住後収入構築サポートの受講者の声に変更する（RelocationTestimonialsSectionを新規作成、カナダ、メキシコ、ジョージア、タイ移住の事例を追加）

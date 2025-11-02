@@ -8,7 +8,7 @@ import RelocationIncomeSupportHeroSection from "@/components/lp/RelocationIncome
 import RelocationProblemsSection from "@/components/lp/RelocationProblemsSection";
 import RelocationFeaturesSection from "@/components/lp/RelocationFeaturesSection";
 import RelocationResultsSection from "@/components/lp/RelocationResultsSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
+import RelocationTestimonialsSection from "@/components/lp/RelocationTestimonialsSection";
 import RelocationFlowSection from "@/components/lp/RelocationFlowSection";
 import ContactSection from "@/components/ContactSection";
 
@@ -190,7 +190,7 @@ export default function RelocationIncomeSupport() {
       <RelocationProblemsSection />
       <RelocationFeaturesSection />
       <RelocationResultsSection />
-      <TestimonialsSection />
+      <RelocationTestimonialsSection />
       <RelocationFlowSection />
       <ContactSection />
       <Footer />
