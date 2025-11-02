@@ -215,7 +215,7 @@ export default function AboutUs() {
       {/* Mission, Vision, Values */}
       <section className="relative py-24 bg-gray-50 overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="pattern-text">VISION VISION VISION</div>
+          <div className="pattern-text">ABOUT ABOUT ABOUT</div>
         </div>
 
         <div className="container relative z-10">
@@ -227,83 +227,33 @@ export default function AboutUs() {
             className="max-w-4xl mx-auto"
           >
             <div className="text-center mb-16">
-              <p className="text-sm text-gray-600 mb-2">Our Philosophy</p>
+              <p className="text-sm text-gray-600 mb-2">私たちについて</p>
               <h2 className="text-4xl md:text-5xl font-bold">
-                ミッション・ビジョン・バリュー
+                会社概要
               </h2>
             </div>
 
             <div className="space-y-8">
-              <div className="bg-white border border-gray-200 p-8">
-                <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-                  <span className="w-1 h-8 bg-black"></span>
-                  ミッション
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
+              <div>
+                <h3 className="text-2xl font-bold mb-3">私たちのミッション</h3>
+                <p className="text-gray-600 leading-relaxed">
                   グローバルな視点で、個人と企業の成長を支援します。海外移住の夢を実現し、ビジネスの国際展開をサポートすることで、より豊かで自由な人生とビジネスの創造に貢献します。
                 </p>
               </div>
 
-              <div className="bg-white border border-gray-200 p-8">
-                <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-                  <span className="w-1 h-8 bg-black"></span>
-                  ビジョン
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  AI時代において、場所にとらわれない働き方と生き方を実現し、「あなたの生き方、好き！」と思ってもらえる人生を、一人でも多くの方に届けます。
+              <div>
+                <h3 className="text-2xl font-bold mb-3">私たちの強み</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  日本人とフランス人の国際チームが、英語・フランス語・スペイン語・日本語の4言語で世界中のAIニュースを毎日収集。海外の最先端事例を日本市場に適応させ、カナダ、メキシコ、ジョージアへの移住サポートと、AI導入・デジタルマーケティングの包括的なビジネスソリューションを提供します。
                 </p>
               </div>
 
-              <div className="bg-white border border-gray-200 p-8">
-                <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                  <span className="w-1 h-8 bg-black"></span>
-                  バリュー（価値観）
-                </h3>
-                <div className="grid md:grid-cols-2 gap-6">
-                  {values.map((value, index) => (
-                    <div key={index} className="border-l-4 border-black pl-4">
-                      <h4 className="text-lg font-bold mb-2">{value.title}</h4>
-                      <p className="text-sm text-gray-600">{value.description}</p>
-                    </div>
-                  ))}
-                </div>
+              <div>
+                <h3 className="text-2xl font-bold mb-3">私たちの価値観</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  クライアント一人ひとりの夢と目標を大切にし、長期的なパートナーシップを築きます。透明性、誠実さ、そして結果へのコミットメントを最優先に、最高のサービスを提供します。
+                </p>
               </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Achievements */}
-      <section className="py-24 bg-white">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="text-center mb-16">
-              <p className="text-sm text-gray-600 mb-2">Our Achievements</p>
-              <h2 className="text-4xl md:text-5xl font-bold">実績</h2>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {achievements.map((achievement, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="text-4xl md:text-5xl font-black mb-3">
-                    {achievement.value}
-                  </div>
-                  <div className="text-sm text-gray-600">{achievement.label}</div>
-                </motion.div>
-              ))}
             </div>
           </motion.div>
         </div>
