@@ -21,7 +21,7 @@ export default function Header() {
             <img 
               src="/logo.png" 
               alt="MichiShirube OÜ Logo" 
-              className="h-12"
+              className="h-12 w-auto"
             />
           </a>
 

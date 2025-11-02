@@ -14,8 +14,8 @@ body {
   position: relative;
 }
 
-/* Ensure all images are responsive */
-img {
+/* Ensure all images are responsive (except logos) */
+img:not([alt*="Logo"]):not([alt*="logo"]) {
   max-width: 100%;
   height: auto;
 }
