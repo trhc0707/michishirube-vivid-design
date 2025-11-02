@@ -1,19 +1,19 @@
 export default function CommunityProblemsSection() {
   const problems = [
     {
-      icon: "/problem1.jpg",
+      icon: "/problem1.webp",
       title: "情報が散在している",
       description: "海外移住の情報がインターネット上に散在しており、信頼できる情報を見つけるのが難しい。どの情報を信じればいいのかわからない...",
       borderColor: "border-purple",
     },
     {
-      icon: "/problem2.png",
+      icon: "/problem2.webp",
       title: "相談相手がいない",
       description: "移住について相談できる仲間や先輩がおらず、不安を抱えたまま準備を進めている。孤独な戦いになってしまう...",
       borderColor: "border-orange",
     },
     {
-      icon: "/problem3.jpg",
+      icon: "/problem3.webp",
       title: "現地情報が不足",
       description: "移住先の最新情報や生活の実態がわからず、移住後のイメージが湧かない。本当に移住できるのか不安...",
       borderColor: "border-green",

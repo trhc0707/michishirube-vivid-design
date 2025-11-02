@@ -68,7 +68,7 @@ export default function AboutUs() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/hero-bg.png')",
+            backgroundImage: "url('/hero-bg.webp')",
           }}
         >
           <div className="absolute inset-0 bg-black/40"></div>

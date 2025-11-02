@@ -21,7 +21,7 @@ const resources: ResourceItem[] = [
     title: "カナダ移住完全ガイドセミナー",
     category: "海外移住",
     description: "カナダ移住の最新情報、ビザ取得方法、生活費、仕事の見つけ方まで、11年の海外経験を持つ代表が徹底解説。実際の移住成功事例も紹介します。",
-    image: "/resources-canada-seminar.jpg",
+    image: "/resources-canada-seminar.webp",
     badge: "海外移住"
   },
   {
@@ -29,7 +29,7 @@ const resources: ResourceItem[] = [
     title: "ジョージア移住セミナー - ノマドビザ完全ガイド",
     category: "海外移住",
     description: "注目のジョージア（グルジア）移住の魅力を徹底解説。ノマドビザの取得方法、生活費の安さ、治安、文化など、実際の移住経験者が語ります。",
-    image: "/resources-georgia-seminar.jpg",
+    image: "/resources-georgia-seminar.webp",
     badge: "海外移住"
   },
   {
@@ -37,7 +37,7 @@ const resources: ResourceItem[] = [
     title: "メキシコ子育て・教育セミナー",
     category: "海外移住",
     description: "メキシコでの子育て・教育事情を徹底解説。現地の学校システム、入学手続き、教育費、バイリンガル教育など、実際にメキシコで子育てをしている代表が語ります。",
-    image: "/resources-mexico-school.jpg",
+    image: "/resources-mexico-school.webp",
     badge: "海外移住"
   },
   {
@@ -45,7 +45,7 @@ const resources: ResourceItem[] = [
     title: "AI活用入門ガイド - 今日から使える実践テクニック",
     category: "AI活用",
     description: "ChatGPT、Claude、Geminiなど主要AIツールの使い方を初心者向けに解説。業務効率化、コンテンツ作成、データ分析など、すぐに使える実践テクニックを紹介します。",
-    image: "/resources-ai-guide-pdf.jpg",
+    image: "/resources-ai-guide-pdf.webp",
     badge: "AI活用"
   },
   {
@@ -53,7 +53,7 @@ const resources: ResourceItem[] = [
     title: "企業向けAI導入完全ガイド",
     category: "AI活用",
     description: "4言語で世界中のAI情報を収集する代表が、企業のAI導入を成功に導く完全ガイド。シフト管理、在庫管理、顧客対応など8種類の自動化事例を詳しく解説します。",
-    image: "/resources-ai-implementation.jpg",
+    image: "/resources-ai-implementation.webp",
     badge: "AI活用"
   }
 ];
@@ -146,7 +146,7 @@ export default function Resources() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/hero-bg.png')",
+            backgroundImage: "url('/hero-bg.webp')",
           }}
         >
           <div className="absolute inset-0 bg-black/50"></div>

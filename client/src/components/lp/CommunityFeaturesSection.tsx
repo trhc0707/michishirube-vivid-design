@@ -5,7 +5,7 @@ export default function CommunityFeaturesSection() {
       title: "24時間いつでもアクセス可能な",
       highlight: "オンラインコミュニティ",
       description: "質問、相談、情報共有が自由にできるオンラインコミュニティ。世界中のメンバーと時差を気にせず交流できます。移住の悩みを共有し、先輩メンバーからアドバイスをもらえます。",
-      icon: "/feature1.png",
+      icon: "/feature1.webp",
       borderColor: "border-purple",
     },
     {
@@ -13,7 +13,7 @@ export default function CommunityFeaturesSection() {
       title: "月2回開催される",
       highlight: "定期勉強会",
       description: "移住に関する様々なテーマで、専門家を招いた勉強会を定期開催。ビザ取得、現地生活、ビジネス展開など、実践的な知識を学べます。",
-      icon: "/feature2.png",
+      icon: "/feature2.webp",
       borderColor: "border-orange",
     },
     {
@@ -21,7 +21,7 @@ export default function CommunityFeaturesSection() {
       title: "50カ国以上の移住先から得られる",
       highlight: "現地情報共有",
       description: "カナダ、メキシコ、ジョージア、タイなど、50カ国以上に住むメンバーから、リアルタイムで現地情報を入手できます。生活費、治安、ビザ情報など、最新の情報が手に入ります。",
-      icon: "/feature3.jpg",
+      icon: "/feature3.webp",
       borderColor: "border-green",
     },
     {
@@ -29,7 +29,7 @@ export default function CommunityFeaturesSection() {
       title: "メンバーだけが参加できる",
       highlight: "限定イベント",
       description: "オフ会、現地ツアー、ビジネスマッチングなど、メンバー限定のイベントを定期開催。同じ移住先を目指す仲間と直接会って、ネットワークを広げられます。",
-      icon: "/feature4.jpg",
+      icon: "/feature4.webp",
       borderColor: "border-purple",
     },
   ];

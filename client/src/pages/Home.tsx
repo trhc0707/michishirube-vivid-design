@@ -21,7 +21,7 @@ export default function Home() {
         "url": "https://vivid-design.manus.space",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://vivid-design.manus.space/logo.png"
+          "url": "https://vivid-design.manus.space/logo.webp"
         },
         "contactPoint": [
           {
@@ -100,7 +100,7 @@ export default function Home() {
         "@type": "ProfessionalService",
         "@id": "https://vivid-design.manus.space/#business",
         "name": "MichiShirube OÜ",
-        "image": "https://vivid-design.manus.space/logo.png",
+        "image": "https://vivid-design.manus.space/logo.webp",
         "priceRange": "要相談",
         "address": {
           "@type": "PostalAddress",

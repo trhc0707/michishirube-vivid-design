@@ -19,7 +19,7 @@ export default function Header() {
           {/* Logo */}
           <a href="/" className="flex items-center">
             <img 
-              src="/logo.png" 
+              src="/logo.webp" 
               alt="MichiShirube OÜ Logo" 
               width="48"
               height="48"

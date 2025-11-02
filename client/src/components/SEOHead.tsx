@@ -13,7 +13,7 @@ export default function SEOHead({
   title,
   description,
   keywords,
-  ogImage = "/hero-bg.png",
+  ogImage = "/hero-bg.webp",
   ogType = "website",
   structuredData,
 }: SEOHeadProps) {

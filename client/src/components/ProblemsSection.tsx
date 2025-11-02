@@ -1,17 +1,17 @@
 export default function ProblemsSection() {
   const problems = [
     {
-      icon: "/problem1.jpg",
+      icon: "/problem1.webp",
       title: "AIは気になるけど、よくわかっていない",
       description: "なんとなくすごそうだけど、何ができるかわからない。活用方法もイメージできず、導入に踏み切れない..."
     },
     {
-      icon: "/problem2.png",
+      icon: "/problem2.webp",
       title: "活用方法がわからない",
       description: "できることはわかるけど、うちの会社にどう活かせばいいのか。「AIができること」から考えてしまい、具体的な活用イメージが湧かない..."
     },
     {
-      icon: "/problem3.jpg",
+      icon: "/problem3.webp",
       title: "導入に失敗したくない",
       description: "高額な費用を払ったのに、1年後には使われなくなってしまう。そんな失敗事例を聞いて、導入を渋ってしまう..."
     }

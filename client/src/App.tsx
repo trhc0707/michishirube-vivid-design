@@ -1,19 +1,30 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/NotFound";
 import { Route, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import Home from "./pages/Home";
-import OverseasRelocation from "./pages/OverseasRelocation";
-import BusinessConsulting from "./pages/BusinessConsulting";
-import AboutUs from "./pages/AboutUs";
-import Resources from "./pages/Resources";
-import Contact from "./pages/Contact";
-import AIServices from "./pages/AIServices";
-import RelocationIncomeSupport from "./pages/RelocationIncomeSupport";
-import OverseasCommunity from "./pages/OverseasCommunity";
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
+
+// Lazy load pages for better performance
+const Home = lazy(() => import("./pages/Home"));
+const OverseasRelocation = lazy(() => import("./pages/OverseasRelocation"));
+const BusinessConsulting = lazy(() => import("./pages/BusinessConsulting"));
+const AboutUs = lazy(() => import("./pages/AboutUs"));
+const Resources = lazy(() => import("./pages/Resources"));
+const Contact = lazy(() => import("./pages/Contact"));
+const AIServices = lazy(() => import("./pages/AIServices"));
+const RelocationIncomeSupport = lazy(() => import("./pages/RelocationIncomeSupport"));
+const OverseasCommunity = lazy(() => import("./pages/OverseasCommunity"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+
+// Loading fallback component
+function LoadingFallback() {
+  return (
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+    </div>
+  );
+}
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -29,20 +40,22 @@ function Router() {
   return (
     <>
       <ScrollToTop />
-      <Switch>
-        <Route path={"/"} component={Home} />
-        <Route path={"/overseas-relocation"} component={OverseasRelocation} />
-        <Route path={"/business-consulting"} component={BusinessConsulting} />
-        <Route path={"/about-us"} component={AboutUs} />
-        <Route path="/resources" component={Resources} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/ai-services" component={AIServices} />
-      <Route path={"/relocation-income-support"} component={RelocationIncomeSupport} />
-      <Route path={"/overseas-community"} component={OverseasCommunity} />
-        <Route path="/404" component={NotFound} />
-        {/* Final fallback route */}
-        <Route component={NotFound} />
-      </Switch>
+      <Suspense fallback={<LoadingFallback />}>
+        <Switch>
+          <Route path={"/"} component={Home} />
+          <Route path={"/overseas-relocation"} component={OverseasRelocation} />
+          <Route path={"/business-consulting"} component={BusinessConsulting} />
+          <Route path={"/about-us"} component={AboutUs} />
+          <Route path="/resources" component={Resources} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/ai-services" component={AIServices} />
+          <Route path={"/relocation-income-support"} component={RelocationIncomeSupport} />
+          <Route path={"/overseas-community"} component={OverseasCommunity} />
+          <Route path="/404" component={NotFound} />
+          {/* Final fallback route */}
+          <Route component={NotFound} />
+        </Switch>
+      </Suspense>
     </>
   );
 }

@@ -9,21 +9,21 @@ const featuredResources = [
     title: "カナダ移住完全ガイドセミナー",
     category: "海外移住",
     description: "カナダ移住の最新情報、ビザ取得方法、生活費、仕事の見つけ方まで徹底解説",
-    image: "/resources-canada-seminar.jpg",
+    image: "/resources-canada-seminar.webp",
   },
   {
     id: "ai-guide-pdf",
     title: "AI活用入門ガイド",
     category: "AI活用",
     description: "ChatGPT、Claude、Geminiなど主要AIツールの使い方を初心者向けに解説",
-    image: "/resources-ai-guide-pdf.jpg",
+    image: "/resources-ai-guide-pdf.webp",
   },
   {
     id: "georgia-seminar",
     title: "ジョージア移住セミナー",
     category: "海外移住",
     description: "ノマドビザの取得方法、生活費の安さ、治安、文化など実際の移住経験者が語る",
-    image: "/resources-georgia-seminar.jpg",
+    image: "/resources-georgia-seminar.webp",
   },
 ];
 

@@ -5,7 +5,7 @@ export default function RelocationFeaturesSection() {
       title: "動画編集\n誰でも簡単に",
       highlight: "プロ級の動画",
       description: "AIツールを使えば、複雑な編集作業も驚くほど簡単に。字幕自動生成、BGM選定、カット編集まで、すべてAIがサポート。初心者でも、わずか数週間でクライアントから喜ばれる動画を作れるようになります。",
-      icon: "/feature1.png",
+      icon: "/feature1.webp",
       borderColor: "border-purple",
     },
     {
@@ -13,7 +13,7 @@ export default function RelocationFeaturesSection() {
       title: "LP作成で\n売れる仕組みを",
       highlight: "デザイン不要",
       description: "ランディングページ（LP）は、商品を売るための重要なツール。AIを使えば、デザインスキルがなくても、コンバージョン率の高いLPを作成可能。テンプレートとAIの組み合わせで、プロ顔負けのページを短時間で完成させます。",
-      icon: "/feature2.png",
+      icon: "/feature2.webp",
       borderColor: "border-orange",
     },
     {
@@ -21,7 +21,7 @@ export default function RelocationFeaturesSection() {
       title: "HP制作で\n企業の顔を",
       highlight: "自分の手で",
       description: "ホームページ制作は、企業にとって必須のサービス。AIを活用すれば、コーディング知識がなくても、美しく機能的なサイトを構築できます。クライアントの要望に応え、継続的な収入源を確保できます。",
-      icon: "/feature3.jpg",
+      icon: "/feature3.webp",
       borderColor: "border-green",
     },
     {
@@ -29,7 +29,7 @@ export default function RelocationFeaturesSection() {
       title: "ECサイト構築で\n販売の自動化を",
       highlight: "実現",
       description: "オンラインショップの需要は年々増加。AIツールを使えば、在庫管理、決済システム、顧客対応まで自動化されたECサイトを構築可能。クライアントのビジネスを次のレベルに引き上げ、高単価案件を獲得できます。",
-      icon: "/feature4.jpg",
+      icon: "/feature4.webp",
       borderColor: "border-purple",
     },
   ];
