@@ -270,3 +270,12 @@
 
 ## 海外移住後収入構築サポートセクションへのAIサービスボタン追加
 - [x] 海外移住後収入構築サポートのセクションにAIサービスページへのボタンを追加する（/relocation-income-supportへのリンクボタンを追加）
+
+## カラフルな枠をシンプルなデザインに変更
+- [ ] ProblemsSectionの画像の枠をシンプルに変更する
+- [ ] FeaturesSectionの画像の枠をシンプルに変更する
+- [ ] TestimonialsSectionのカードの枠をシンプルに変更する
+
+## 参照サイトの内容を/relocation-income-supportに落とし込む
+- [x] https://skills.education-nomad-program.comの内容を確認する
+- [x] /relocation-income-supportページのデザインはそのままに、内容のみを更新する（Problems、Features、Results、Testimonialsセクションを更新）

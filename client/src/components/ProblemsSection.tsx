@@ -3,21 +3,18 @@ export default function ProblemsSection() {
     {
       icon: "/problem1.jpg",
       title: "AIは気になるけど、よくわかっていない",
-      description: "なんとなくすごそうだけど、何ができるかわからない。活用方法もイメージできず、導入に踏み切れない...",
-      borderColor: "border-purple",
+      description: "なんとなくすごそうだけど、何ができるかわからない。活用方法もイメージできず、導入に踏み切れない..."
     },
     {
       icon: "/problem2.png",
       title: "活用方法がわからない",
-      description: "できることはわかるけど、うちの会社にどう活かせばいいのか。「AIができること」から考えてしまい、具体的な活用イメージが湧かない...",
-      borderColor: "border-orange",
+      description: "できることはわかるけど、うちの会社にどう活かせばいいのか。「AIができること」から考えてしまい、具体的な活用イメージが湧かない..."
     },
     {
       icon: "/problem3.jpg",
       title: "導入に失敗したくない",
-      description: "高額な費用を払ったのに、1年後には使われなくなってしまう。そんな失敗事例を聞いて、導入を渋ってしまう...",
-      borderColor: "border-green",
-    },
+      description: "高額な費用を払ったのに、1年後には使われなくなってしまう。そんな失敗事例を聞いて、導入を渋ってしまう..."
+    }
   ];
 
   return (
@@ -40,7 +37,7 @@ export default function ProblemsSection() {
           {problems.map((problem, index) => (
             <div key={index} data-aos="fade-up" data-aos-delay={index * 100}>
               {/* イラスト */}
-              <div className={`mb-6 rounded-2xl ${problem.borderColor} overflow-hidden bg-white`}>
+              <div className="mb-6 rounded-2xl border-2 border-gray-200 overflow-hidden bg-white">
                 <img src={problem.icon} alt={problem.title} className="w-full h-64 object-cover" />
               </div>
 

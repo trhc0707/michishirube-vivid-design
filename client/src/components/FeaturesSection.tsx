@@ -5,33 +5,29 @@ export default function FeaturesSection() {
       title: "待つ導入は今日で終わり\nこれからは",
       highlight: "攻めるAI導入",
       description: "小さくスタートして、優先度の高いものから導入。期待する結果を明確にした上で、段階的に展開します。最初から高額な費用を投入せず、確実に成果を出しながら進めます。",
-      icon: "/feature1.png",
-      borderColor: "border-purple",
+      icon: "/feature1.png"
     },
     {
       number: "02",
       title: "あらゆるデータを可視化して、",
       highlight: "正しい判断",
       description: "社内のタスクを洗い出し、どこを削ると最も成果が出るのか、どこに最も時間を使っているのかを分析。データに基づいた最適なアプローチを提案します。",
-      icon: "/feature2.png",
-      borderColor: "border-orange",
+      icon: "/feature2.png"
     },
     {
       number: "03",
       title: "独自かつ各社オリジナルの導入計画で\nミスマッチを",
       highlight: "極限まで0に",
       description: "企業によって「やったほうがいい・やらないほうがいい」は異なります。御社の業界、規模、課題に合わせた、完全オリジナルの導入計画を設計します。",
-      icon: "/feature3.jpg",
-      borderColor: "border-green",
+      icon: "/feature3.jpg"
     },
     {
       number: "04",
       title: "導入後の成果を、事前に予測。",
       highlight: "長期的な成長",
       description: "短期での結果ではなく、長期的に売上も顧客満足度も上がって、人件費も時間も削減できる仕組みを構築。それぞれが自分にしかできないことにフォーカスできる状態を作ります。",
-      icon: "/feature4.jpg",
-      borderColor: "border-purple",
-    },
+      icon: "/feature4.jpg"
+    }
   ];
 
   return (
@@ -86,7 +82,7 @@ export default function FeaturesSection() {
                 className={index % 2 === 1 ? "md:order-1" : ""}
                 data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
               >
-              <div className={`rounded-2xl ${feature.borderColor} overflow-hidden bg-gray-50`}>
+              <div className="rounded-2xl border-2 border-gray-200 overflow-hidden bg-gray-50">
                 <img src={feature.icon} alt={feature.highlight} className="w-full h-full object-cover" />
               </div>
               </div>
