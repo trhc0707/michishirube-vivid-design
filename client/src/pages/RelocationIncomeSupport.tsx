@@ -5,8 +5,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import RelocationIncomeSupportHeroSection from "@/components/lp/RelocationIncomeSupportHeroSection";
-import ProblemsSection from "@/components/ProblemsSection";
-import FeaturesSection from "@/components/FeaturesSection";
+import RelocationProblemsSection from "@/components/lp/RelocationProblemsSection";
+import RelocationFeaturesSection from "@/components/lp/RelocationFeaturesSection";
 import ResultsSection from "@/components/ResultsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FlowSection from "@/components/FlowSection";
@@ -187,8 +187,8 @@ export default function RelocationIncomeSupport() {
       />
       <Header />
       <RelocationIncomeSupportHeroSection />
-      <ProblemsSection />
-      <FeaturesSection />
+      <RelocationProblemsSection />
+      <RelocationFeaturesSection />
       <ResultsSection />
       <TestimonialsSection />
       <FlowSection />

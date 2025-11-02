@@ -279,3 +279,8 @@
 ## 参照サイトの内容を/relocation-income-supportに落とし込む
 - [x] https://skills.education-nomad-program.comの内容を確認する
 - [x] /relocation-income-supportページのデザインはそのままに、内容のみを更新する（Problems、Features、Results、Testimonialsセクションを更新）
+
+## /relocation-income-supportページのヒーローセクションとタイトル修正
+- [x] ヒーローセクションを参照サイトの内容に更新する（「家族との時間を最優先にする、新しい働き方。海外で稼ぐ「AI時代のWebスキル」」に変更）
+- [x] ページタイトルとセクションタイトルを海外移住後収入構築サポートに変更する（RelocationProblemsSection、RelocationFeaturesSectionを新規作成）
+- [x] ProblemsセクションとFeaturesセクションのタイトルを参照サイトに合わせる（「3つの罠」「4つのスキル」に変更）

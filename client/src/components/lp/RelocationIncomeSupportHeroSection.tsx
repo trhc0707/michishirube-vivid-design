@@ -26,12 +26,13 @@ export default function RelocationIncomeSupportHeroSection() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
-              海外移住後の<br />
-              収入構築サポート
+              家族との時間を最優先にする、<br />
+              新しい働き方。<br />
+              海外で稼ぐ「AI時代のWebスキル」
             </h1>
             <p className="text-xl md:text-2xl mb-8 font-light">
-              移住先でも安定した収入を実現する<br className="hidden md:block" />
-              完全オンライン型ビジネス構築プログラム
+              もう会社や場所に縛られない。<br className="hidden md:block" />
+              大切な家族と、理想のライフスタイルを実現する「稼ぐ力」を手に入れる。
             </p>
           </motion.div>
 
@@ -42,19 +43,19 @@ export default function RelocationIncomeSupportHeroSection() {
             className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto"
           >
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <div className="text-5xl font-black mb-2">100%</div>
-              <div className="text-sm font-light">オンライン完結</div>
-              <div className="text-xs mt-2 opacity-80">*場所を選ばず収入を得る</div>
+              <div className="text-5xl font-black mb-2">800+</div>
+              <div className="text-sm font-light">相談実績</div>
+              <div className="text-xs mt-2 opacity-80">*すでに800人以上が相談済み</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <div className="text-5xl font-black mb-2">6ヶ月</div>
-              <div className="text-sm font-light">サポート期間</div>
-              <div className="text-xs mt-2 opacity-80">*収入構築まで伴走</div>
+              <div className="text-5xl font-black mb-2">93%</div>
+              <div className="text-sm font-light">成果達成率</div>
+              <div className="text-xs mt-2 opacity-80">*6ヶ月以内に具体的な成果を実現</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <div className="text-5xl font-black mb-2">90%</div>
-              <div className="text-sm font-light">収入化成功率</div>
-              <div className="text-xs mt-2 opacity-80">*2024年度実績</div>
+              <div className="text-5xl font-black mb-2">3.2倍</div>
+              <div className="text-sm font-light">平均収入向上</div>
+              <div className="text-xs mt-2 opacity-80">*受講開始から6ヶ月後</div>
             </div>
           </motion.div>
 
@@ -67,7 +68,7 @@ export default function RelocationIncomeSupportHeroSection() {
               onClick={scrollToContact}
               className="bg-white text-blue-900 hover:bg-gray-100 px-12 py-6 text-lg font-bold rounded-full shadow-2xl"
             >
-              無料相談を申し込む
+無料体験に申し込む
             </Button>
           </motion.div>
         </div>
