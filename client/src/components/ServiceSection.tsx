@@ -57,7 +57,7 @@ export default function ServiceSection() {
         { name: "AI研修", link: "/ai-services" },
         { name: "AI開発", link: "/ai-services" },
       ],
-      link: "/ai-services"
+      link: "/business-consulting"
     },
   ];
 
