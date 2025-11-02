@@ -299,3 +299,8 @@
     background: linear-gradient(transparent 60%, rgba(255, 235, 59, 0.4) 60%);
   }
 }
+
+/* Hide "Made with Manus" branding */
+a[href*="manus.im"] {
+  display: none !important;
+}
