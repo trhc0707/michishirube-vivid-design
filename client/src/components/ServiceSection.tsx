@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
 
 export default function ServiceSection() {
   const [isVisible, setIsVisible] = useState(true);
@@ -84,16 +85,14 @@ export default function ServiceSection() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white border border-gray-200 p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group relative"
+                className="bg-white border border-gray-200 p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group relative flex flex-col"
               >
-                <Link href={service.link}>
-                  <div className="absolute top-4 right-4">
-                    <ArrowUpRight className="text-gray-400 group-hover:text-gray-700 transition-colors" size={24} />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4 cursor-pointer">{service.title}</h3>
-                  <p className="text-gray-600 text-sm mb-6">{service.description}</p>
-                </Link>
-                <div className="space-y-2">
+                <div className="absolute top-4 right-4">
+                  <ArrowUpRight className="text-gray-400 group-hover:text-gray-700 transition-colors" size={24} />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                <p className="text-gray-600 text-sm mb-6">{service.description}</p>
+                <div className="space-y-2 mb-6">
                   {service.items.map((item, idx) => (
                     item.link ? (
                       <Link key={idx} href={item.link}>
@@ -107,6 +106,14 @@ export default function ServiceSection() {
                       </div>
                     )
                   ))}
+                </div>
+                <div className="mt-auto">
+                  <Link href={service.link}>
+                    <Button variant="outline" className="w-full group-hover:bg-black group-hover:text-white transition-colors">
+                      詳しく見る
+                      <ArrowUpRight className="ml-2" size={16} />
+                    </Button>
+                  </Link>
                 </div>
               </div>
             ))}
