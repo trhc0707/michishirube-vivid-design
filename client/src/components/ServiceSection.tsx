@@ -72,7 +72,7 @@ export default function ServiceSection() {
       <div className="container relative z-10">
         <div className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <div className="text-center mb-4">
-            <p className="text-sm text-gray-600 mb-2">私たちのサービス</p>
+            <p className="text-sm text-gray-600 mb-2">Our Services</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-8">
               サービス一覧
             </h2>

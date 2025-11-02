@@ -318,3 +318,7 @@
 ## ServiceSectionとAboutSectionの説明文を英語に変更
 - [x] ServiceSectionの説明文を自然な英語に変更する（"Innovative solutions and unique approaches..."）
 - [x] AboutSectionの説明文を自然な英語に変更する（"specializes in overseas relocation and business consulting..."）
+
+## 見出し上のラベルを英語に変更
+- [x] ServiceSectionの「私たちのサービス」を英語に変更する（"Our Services"）
+- [x] AboutSectionの「私たちについて」を英語に変更する（"About Us"）

@@ -34,7 +34,7 @@ export default function AboutSection() {
       <div className="container relative z-10">
         <div className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <div className="text-center mb-4">
-            <p className="text-sm text-gray-600 mb-2">私たちについて</p>
+            <p className="text-sm text-gray-600 mb-2">About Us</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-8">会社概要</h2>
             <p className="text-gray-600 max-w-3xl mx-auto mb-16">
               MichiShirube OÜ specializes in overseas relocation and business consulting, empowering clients worldwide with new opportunities for life and business.
