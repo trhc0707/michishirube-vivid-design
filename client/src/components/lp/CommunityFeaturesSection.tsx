@@ -1,78 +1,89 @@
-import { MessageSquare, Calendar, Globe, Gift } from "lucide-react";
-
 export default function CommunityFeaturesSection() {
   const features = [
     {
-      icon: <MessageSquare className="w-16 h-16" />,
-      title: "オンラインコミュニティ",
-      description: "24時間いつでもアクセスできるオンラインコミュニティ。質問、相談、情報共有が自由にできます。",
-      highlight: "いつでもどこでも"
+      number: "01",
+      title: "24時間いつでもアクセス可能な",
+      highlight: "オンラインコミュニティ",
+      description: "質問、相談、情報共有が自由にできるオンラインコミュニティ。世界中のメンバーと時差を気にせず交流できます。移住の悩みを共有し、先輩メンバーからアドバイスをもらえます。",
+      icon: "/feature1.png",
+      borderColor: "border-purple",
     },
     {
-      icon: <Calendar className="w-16 h-16" />,
-      title: "定期勉強会",
-      description: "月に2回、移住に関するテーマで勉強会を開催。専門家を招いたセミナーも定期的に実施します。",
-      highlight: "月2回開催"
+      number: "02",
+      title: "月2回開催される",
+      highlight: "定期勉強会",
+      description: "移住に関する様々なテーマで、専門家を招いた勉強会を定期開催。ビザ取得、現地生活、ビジネス展開など、実践的な知識を学べます。",
+      icon: "/feature2.png",
+      borderColor: "border-orange",
     },
     {
-      icon: <Globe className="w-16 h-16" />,
-      title: "現地情報共有",
-      description: "世界50カ国以上に住むメンバーから、リアルタイムで現地情報を入手できます。",
-      highlight: "50カ国以上"
+      number: "03",
+      title: "50カ国以上の移住先から得られる",
+      highlight: "現地情報共有",
+      description: "カナダ、メキシコ、ジョージア、タイなど、50カ国以上に住むメンバーから、リアルタイムで現地情報を入手できます。生活費、治安、ビザ情報など、最新の情報が手に入ります。",
+      icon: "/feature3.jpg",
+      borderColor: "border-green",
     },
     {
-      icon: <Gift className="w-16 h-16" />,
-      title: "メンバー限定イベント",
-      description: "オフ会、現地ツアー、ビジネスマッチングなど、メンバー限定のイベントを定期開催します。",
-      highlight: "限定特典"
-    }
+      number: "04",
+      title: "メンバーだけが参加できる",
+      highlight: "限定イベント",
+      description: "オフ会、現地ツアー、ビジネスマッチングなど、メンバー限定のイベントを定期開催。同じ移住先を目指す仲間と直接会って、ネットワークを広げられます。",
+      icon: "/feature4.jpg",
+      borderColor: "border-purple",
+    },
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section id="features" className="section-spacing">
       <div className="container">
+        {/* 見出し */}
         <div className="text-center mb-16">
-          <div className="inline-block bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
-            コミュニティの特徴
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-blue-600">4つの特徴</span>で移住を成功に導く
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            海外移住を成功させるために必要な情報とネットワークを提供します。
+          <p className="text-lg mb-2" style={{ color: "rgb(59, 89, 152)" }}>
+            移住を成功に導く
           </p>
+          <h2 className="heading-section">
+            <span style={{ color: "rgb(59, 89, 152)" }}>コミュニティの</span>
+            <span style={{ color: "rgb(255, 107, 74)" }} className="text-6xl">4</span>
+            <span style={{ color: "rgb(59, 89, 152)" }}>つの特徴</span>
+          </h2>
         </div>
 
-        <div className="space-y-24 max-w-6xl mx-auto">
+        {/* 交互レイアウト */}
+        <div className="space-y-24">
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`grid md:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
+              className={`grid md:grid-cols-2 gap-12 items-center ${
+                index % 2 === 1 ? "md:flex-row-reverse" : ""
+              }`}
             >
-              {/* Content */}
-              <div className={index % 2 === 1 ? "md:order-2" : ""}>
-                <div className="relative">
-                  <div className="absolute -left-4 -top-4 text-[120px] font-bold text-gray-100 leading-none">
-                    {String(index + 1).padStart(2, "0")}
-                  </div>
-                  <div className="relative">
-                    <div className="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium mb-4">
-                      {feature.highlight}
-                    </div>
-                    <h3 className="text-3xl font-bold mb-4">{feature.title}</h3>
-                    <p className="text-gray-600 text-lg leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </div>
+              {/* テキスト */}
+              <div
+                className={`relative ${index % 2 === 1 ? "md:order-2" : ""}`}
+              >
+                {/* 背景番号 */}
+                <div
+                  className="absolute -top-8 -left-4 text-9xl font-bold opacity-10"
+                  style={{ color: "rgb(59, 89, 152)" }}
+                >
+                  {feature.number}
+                </div>
+
+                <div className="relative z-10">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4 whitespace-pre-line">
+                    {feature.title}
+                    <span style={{ color: "rgb(231, 76, 60)" }}>"{feature.highlight}"</span>
+                    を実現
+                  </h3>
+                  <p className="text-gray-700 text-lg">{feature.description}</p>
                 </div>
               </div>
 
-              {/* Icon */}
+              {/* 画像 */}
               <div className={index % 2 === 1 ? "md:order-1" : ""}>
-                <div className="flex items-center justify-center">
-                  <div className="w-64 h-64 rounded-full bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center text-blue-600">
-                    {feature.icon}
-                  </div>
+                <div className={`rounded-2xl ${feature.borderColor} overflow-hidden card-shadow`}>
+                  <img src={feature.icon} alt={feature.title} className="w-full h-auto" />
                 </div>
               </div>
             </div>

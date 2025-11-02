@@ -328,3 +328,8 @@
 - [x] 海外移住コミュニティの詳細ページ（/overseas-community）を作成する
 - [x] design-templateと同じデザイン・トンマナでLPを作成する（Hero、Problems、Features、Results、Testimonials、Flowセクションを作成）
 - [x] ルーティングを設定する（App.tsxにルートを追加）
+
+## /overseas-communityページのデザインをdesign-templateに完全統一
+- [x] design-templateのデザインを再確認する
+- [x] 各セクションのデザインをdesign-templateと完全に一致させる（Hero、Problems、Features、Results、Testimonials、Flowセクションを修正）
+- [x] 色、フォント、レイアウト、スペーシングを統一する（rgb(59, 89, 152)、heading-section、card-shadowなどを適用）

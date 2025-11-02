@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Users, MessageCircle, Globe } from "lucide-react";
 
 export default function OverseasCommunityHeroSection() {
   const handleCTAClick = () => {
@@ -10,90 +9,74 @@ export default function OverseasCommunityHeroSection() {
   };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }}></div>
-      </div>
-
-      <div className="container relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="space-y-8">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md border border-gray-200">
-              <Users className="w-4 h-4 text-blue-600" />
-              <span className="text-sm font-medium">800+ Active Members</span>
+    <section
+      className="relative pt-24 md:pt-32 pb-32 md:pb-40 wave-bottom"
+      style={{ background: "linear-gradient(135deg, rgb(59, 89, 152) 0%, rgb(45, 70, 120) 100%)" }}
+    >
+      <div className="container">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          {/* 左側コンテンツ */}
+          <div className="text-white">
+            {/* バッジ */}
+            <div className="inline-block bg-white text-gray-800 px-6 py-2 rounded-full text-sm mb-6">
+              800+人のメンバーと共に、海外移住を成功させる
             </div>
 
-            {/* Heading */}
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-              海外移住を目指す
-              <br />
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                仲間とつながる
-              </span>
-              <br />
-              コミュニティ
+            {/* 見出し */}
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 md:mb-6">
+              海外移住を目指す仲間とつながる
             </h1>
 
-            {/* Description */}
-            <p className="text-xl text-gray-600 leading-relaxed">
-              情報交換、相談、現地情報の共有など、移住を成功させるためのネットワークを提供します。
-            </p>
-
-            {/* Stats Circles */}
-            <div className="flex gap-6">
-              <div className="flex flex-col items-center">
-                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white shadow-lg">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold">800+</div>
-                    <div className="text-xs">メンバー</div>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center text-white shadow-lg">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold">50+</div>
-                    <div className="text-xs">移住先国</div>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-white shadow-lg">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold">24/7</div>
-                    <div className="text-xs">サポート</div>
-                  </div>
-                </div>
-              </div>
+            {/* 説明文 */}
+            <div className="text-base md:text-lg lg:text-xl mb-6 md:mb-8 space-y-1 md:space-y-2">
+              <p>情報交換、相談、現地情報の共有など、</p>
+              <p>移住を成功させるためのネットワークを提供します。</p>
+              <p>50カ国以上の移住先情報が手に入る</p>
             </div>
 
-            {/* CTA Button */}
-            <div className="flex gap-4">
+            {/* 統計サークル */}
+            <div className="flex gap-3 md:gap-6 mb-6 md:mb-8">
+              {[
+                { label: "メンバー", value: "800", unit: "+" },
+                { label: "移住先国", value: "50", unit: "+" },
+                { label: "成功率", value: "93", unit: "%" },
+              ].map((stat, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center justify-center w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36 rounded-full border-2 md:border-4 border-white"
+                >
+                  <div className="text-[10px] md:text-xs lg:text-sm mb-1">{stat.label}</div>
+                  <div className="text-lg md:text-2xl lg:text-4xl font-bold">
+                    {stat.value}
+                    <span className="text-xs md:text-sm lg:text-lg">{stat.unit}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-6 text-lg shadow-xl"
+                className="bg-white text-gray-900 hover:bg-gray-100 px-6 md:px-8 py-4 md:py-6 text-base md:text-lg shadow-xl relative overflow-hidden group"
                 onClick={handleCTAClick}
               >
-                無料で参加する
-                <span className="ml-2 bg-white/20 px-2 py-1 rounded text-sm">いますぐ！</span>
+                <span className="relative z-10">無料で参加する</span>
+                <span className="ml-2 bg-gray-900 text-white px-2 py-1 rounded text-xs md:text-sm relative z-10">
+                  いますぐ！
+                </span>
+                <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity"></span>
               </Button>
             </div>
           </div>
 
-          {/* Right Illustration */}
+          {/* 右側イラスト */}
           <div className="relative">
-            <div className="relative aspect-square max-w-lg mx-auto">
-              {/* Placeholder for illustration */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-purple-100 rounded-3xl flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <Globe className="w-32 h-32 mx-auto text-blue-600" />
-                  <MessageCircle className="w-24 h-24 mx-auto text-purple-600" />
-                  <Users className="w-20 h-20 mx-auto text-green-600" />
+            <div className="aspect-square relative">
+              <div className="absolute inset-0 bg-white/10 backdrop-blur-sm rounded-3xl flex items-center justify-center">
+                <div className="text-center text-white">
+                  <div className="text-6xl md:text-8xl font-bold mb-4">800+</div>
+                  <div className="text-xl md:text-2xl">Active Members</div>
                 </div>
               </div>
             </div>

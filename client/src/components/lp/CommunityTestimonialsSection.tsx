@@ -1,77 +1,68 @@
-import { Star } from "lucide-react";
-
 export default function CommunityTestimonialsSection() {
   const testimonials = [
     {
-      name: "田中 健太さん",
-      age: 35,
-      location: "カナダ・バンクーバー",
-      comment: "コミュニティに参加してから、移住の不安が一気に解消されました。先輩メンバーからのアドバイスが本当に役立ちました。",
-      rating: 5
+      company: "カナダ移住",
+      role: "30代男性",
+      title: "参加3ヶ月でカナダ移住に成功",
+      content: "コミュニティで得た情報とアドバイスのおかげで、スムーズにカナダへ移住できました。ビザ取得の手順や現地での生活費など、具体的な情報が手に入ったことが大きかったです。",
+      borderColor: "border-purple",
     },
     {
-      name: "佐藤 美咲さん",
-      age: 28,
-      location: "メキシコ・プラヤデルカルメン",
-      comment: "定期勉強会で学んだビザ取得のノウハウが、移住をスムーズに進める鍵になりました。メンバー同士の交流も楽しいです。",
-      rating: 5
+      company: "メキシコ移住",
+      role: "40代女性",
+      title: "参加6ヶ月でメキシコ移住を実現",
+      content: "同じメキシコを目指すメンバーと情報交換できたことが、移住の決め手になりました。現地の治安や生活環境について、リアルな声を聞けたので、安心して移住できました。",
+      borderColor: "border-orange",
     },
     {
-      name: "鈴木 大輔さん",
-      age: 42,
-      location: "ジョージア・トビリシ",
-      comment: "現地情報の共有が本当に助かります。移住前に知っておくべき情報が、リアルタイムで手に入るのが最高です。",
-      rating: 5
+      company: "ジョージア移住",
+      role: "20代男性",
+      title: "参加4ヶ月でジョージア移住に成功",
+      content: "定期勉強会でビザ取得の方法を学び、先輩メンバーからアドバイスをもらえたことが大きかったです。コミュニティがなければ、移住は実現できなかったと思います。",
+      borderColor: "border-green",
     },
     {
-      name: "高橋 由美さん",
-      age: 31,
-      location: "タイ・チェンマイ",
-      comment: "メンバー限定イベントで、同じ移住先の仲間と出会えました。現地での生活がより充実したものになっています。",
-      rating: 5
-    }
+      company: "タイ移住",
+      role: "50代夫婦",
+      title: "参加1年でタイ移住を実現",
+      content: "夫婦でタイ移住を目指していましたが、コミュニティのサポートのおかげで、無事に移住できました。現地の医療や教育についても詳しく教えてもらえたので、安心して生活しています。",
+      borderColor: "border-purple",
+    },
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section id="testimonials" className="section-spacing bg-gray-50">
       <div className="container">
+        {/* 見出し */}
         <div className="text-center mb-16">
-          <div className="inline-block bg-green-100 text-green-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
-            メンバーの声
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            実際に移住を成功させた<span className="text-green-600">メンバーの声</span>
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            コミュニティを活用して、海外移住を成功させたメンバーの体験談をご紹介します。
-          </p>
+          <h2 className="heading-section">移住成功事例</h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        {/* 2x2グリッド */}
+        <div className="grid md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-white rounded-2xl p-8 card-shadow hover:card-shadow-hover transition-all duration-300"
             >
-              <div className="flex gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-6 leading-relaxed italic">
-                "{testimonial.comment}"
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold">
-                  {testimonial.name.charAt(0)}
+              {/* 会社情報 */}
+              <div className="flex items-center gap-3 mb-4">
+                <div className={`w-12 h-12 rounded-full ${testimonial.borderColor} flex items-center justify-center text-white font-bold text-xl`}>
+                  {testimonial.company[0]}
                 </div>
                 <div>
-                  <div className="font-bold">{testimonial.name}</div>
-                  <div className="text-sm text-gray-600">
-                    {testimonial.age}歳 / {testimonial.location}
-                  </div>
+                  <div className="font-bold text-gray-900">{testimonial.company}</div>
+                  <div className="text-sm text-gray-600">{testimonial.role}</div>
                 </div>
               </div>
+
+              {/* タイトル */}
+              <h3 className="text-xl font-bold mb-4" style={{ color: "rgb(59, 89, 152)" }}>
+                {testimonial.title}
+              </h3>
+
+              {/* 内容 */}
+              <p className="text-gray-700 leading-relaxed">{testimonial.content}</p>
             </div>
           ))}
         </div>

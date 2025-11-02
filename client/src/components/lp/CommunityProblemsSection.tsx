@@ -1,51 +1,56 @@
-import { AlertCircle, HelpCircle, Users } from "lucide-react";
-
 export default function CommunityProblemsSection() {
   const problems = [
     {
-      icon: <HelpCircle className="w-12 h-12" />,
+      icon: "/problem1.jpg",
       title: "情報が散在している",
-      description: "海外移住の情報がインターネット上に散在しており、信頼できる情報を見つけるのが難しい。",
-      borderColor: "border-purple-500"
+      description: "海外移住の情報がインターネット上に散在しており、信頼できる情報を見つけるのが難しい。どの情報を信じればいいのかわからない...",
+      borderColor: "border-purple",
     },
     {
-      icon: <Users className="w-12 h-12" />,
+      icon: "/problem2.png",
       title: "相談相手がいない",
-      description: "移住について相談できる仲間や先輩がおらず、不安を抱えたまま準備を進めている。",
-      borderColor: "border-orange-500"
+      description: "移住について相談できる仲間や先輩がおらず、不安を抱えたまま準備を進めている。孤独な戦いになってしまう...",
+      borderColor: "border-orange",
     },
     {
-      icon: <AlertCircle className="w-12 h-12" />,
+      icon: "/problem3.jpg",
       title: "現地情報が不足",
-      description: "移住先の最新情報や生活の実態がわからず、移住後のイメージが湧かない。",
-      borderColor: "border-green-500"
-    }
+      description: "移住先の最新情報や生活の実態がわからず、移住後のイメージが湧かない。本当に移住できるのか不安...",
+      borderColor: "border-green",
+    },
   ];
 
   return (
-    <section className="py-24 bg-gray-50">
+    <section id="problems" className="section-spacing bg-gray-50">
       <div className="container">
+        {/* 見出し */}
         <div className="text-center mb-16">
-          <div className="inline-block bg-red-100 text-red-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
-            こんなお悩みありませんか？
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            海外移住の<span className="text-red-600">3つの壁</span>
+          <h2 className="heading-section">
+            <span style={{ color: "rgb(59, 89, 152)" }}>海外移住を困らせる</span>
+            <br />
+            <span style={{ color: "rgb(59, 89, 152)" }}>
+              <span style={{ color: "rgb(255, 107, 74)" }} className="text-6xl">3</span>
+              つの壁
+            </span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            多くの人が海外移住を目指す際に直面する課題があります。
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {/* 3カラムグリッド */}
+        <div className="grid md:grid-cols-3 gap-8">
           {problems.map((problem, index) => (
-            <div
-              key={index}
-              className={`bg-white p-8 rounded-lg border-t-4 ${problem.borderColor} shadow-lg hover:shadow-xl transition-shadow`}
-            >
-              <div className="mb-6 text-gray-700">{problem.icon}</div>
-              <h3 className="text-2xl font-bold mb-4">{problem.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{problem.description}</p>
+            <div key={index}>
+              {/* イラスト */}
+              <div className={`mb-6 rounded-2xl ${problem.borderColor} overflow-hidden bg-white`}>
+                <img src={problem.icon} alt={problem.title} className="w-full h-64 object-cover" />
+              </div>
+
+              {/* カード */}
+              <div className="bg-white rounded-2xl p-6 card-shadow">
+                <h3 className="heading-card mb-4">
+                  <span style={{ color: "rgb(255, 107, 74)" }}>{problem.title}</span>
+                </h3>
+                <p className="text-gray-700">{problem.description}</p>
+              </div>
             </div>
           ))}
         </div>
