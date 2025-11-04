@@ -561,3 +561,14 @@
 
 - [x] Remove "※診断後、希望者には「設計スプリント（初月50〜150万円）」を案内します。" paragraph
 - [x] Deploy to GitHub and Vercel
+
+
+## Implement GA4 and Optimize Meta Pixel Tracking (Nov 4, 2025)
+
+- [ ] Add GA4 tracking code (G-M8Z0MEMJ9W) to client/index.html
+- [ ] Add GA4 custom events to Start page (CTA clicks)
+- [ ] Add Meta Pixel ViewContent event (scroll 70%)
+- [ ] Optimize Meta Pixel Lead event (LINE registration)
+- [ ] Test GA4 real-time tracking
+- [ ] Test Meta Pixel events in Event Manager
+- [ ] Deploy to GitHub and Vercel

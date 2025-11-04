@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Start() {
+  const [scrollTracked, setScrollTracked] = useState(false);
+
   useEffect(() => {
     // Track ViewContent event with Meta Pixel
     if (typeof window !== 'undefined' && (window as any).fbq) {
@@ -10,28 +12,75 @@ export default function Start() {
         content_category: 'Landing Page'
       });
     }
-  }, []);
+
+    // Track scroll depth (70%) for both GA4 and Meta Pixel
+    const handleScroll = () => {
+      if (scrollTracked) return;
+      
+      const scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+      
+      if (scrollPercentage >= 0.7) {
+        // GA4 event
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'scroll_70', {
+            event_category: 'engagement',
+            event_label: 'Start Page'
+          });
+        }
+        
+        // Meta Pixel ViewContent event (scroll engagement)
+        if (typeof window !== 'undefined' && (window as any).fbq) {
+          (window as any).fbq('trackCustom', 'ScrollDepth70', {
+            page: 'Start Page'
+          });
+        }
+        
+        setScrollTracked(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [scrollTracked]);
 
   const handleENPClick = () => {
-    // Track Lead event for ENP
+    // GA4 event
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'click_enp_cta', {
+        event_category: 'conversion',
+        event_label: 'ENP Skills Course'
+      });
+    }
+    
+    // Meta Pixel Lead event for ENP
     if (typeof window !== 'undefined' && (window as any).fbq) {
       (window as any).fbq('track', 'Lead', {
         content_name: 'ENP Skills Course',
         content_category: 'toC'
       });
     }
+    
     // TODO: Replace with actual Lステップ URL with Entry_ENP tag
     window.location.href = "https://lin.ee/NdSxKkb";
   };
 
   const handleBizClick = () => {
-    // Track Lead event for Business Diagnosis
+    // GA4 event
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'click_biz_cta', {
+        event_category: 'conversion',
+        event_label: 'Business Diagnosis'
+      });
+    }
+    
+    // Meta Pixel Lead event for Business Diagnosis
     if (typeof window !== 'undefined' && (window as any).fbq) {
       (window as any).fbq('track', 'Lead', {
         content_name: 'Business Diagnosis',
         content_category: 'toB'
       });
     }
+    
     // TODO: Replace with actual /diagnose URL with Entry_Biz tag
     window.location.href = "/diagnose";
   };
