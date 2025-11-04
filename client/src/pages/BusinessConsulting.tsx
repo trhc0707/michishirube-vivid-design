@@ -1,48 +1,25 @@
-import { useLocation } from "wouter";
-import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
 
 export default function BusinessConsulting() {
-  const [, setLocation] = useLocation();
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "ビジネス/マーケティングコンサルティング - MichiShirube OÜ",
-    "description": "AIサービスとマーケティングサービスを統合したビジネスコンサルティング",
-    "provider": {
-      "@type": "Organization",
-      "name": "MichiShirube OÜ"
-    },
-    "serviceType": "Business and Marketing Consulting",
-    "areaServed": ["JP", "Global"]
-  };
-
   const aiServices = [
     {
       title: "AIコンサルティング",
-      description: "ビジネスにAIを導入するためのコンサルティング。課題分析から導入計画、効果測定まで一貫してサポートします。",
-      features: ["課題分析", "AI導入計画策定", "ツール選定", "効果測定"]
+      description: "AI活用の戦略立案から実装まで、包括的にサポート。貴社のビジネスに最適なAIソリューションをご提案します。",
+      features: ["AI戦略立案", "ROI分析", "実装ロードマップ作成", "効果測定"]
     },
     {
       title: "AI研修",
-      description: "社員向けAI研修プログラム。AIの基礎から実践的な活用方法まで、ビジネスで使えるAIスキルを習得できます。",
-      features: ["基礎研修", "実践ワークショップ", "業種別カスタマイズ", "フォローアップ"]
+      description: "社員向けのAI研修プログラム。ChatGPT、画像生成AIなど、実務で使えるスキルを習得できます。",
+      features: ["基礎研修", "実践ワークショップ", "業務別カスタマイズ", "継続サポート"]
     },
     {
       title: "AI開発",
-      description: "カスタムAIソリューションの開発。要件定義から設計、開発、テストまで一貫して対応します。",
-      features: ["要件定義", "システム設計", "開発・テスト", "保守サポート"]
+      description: "カスタムAIソリューションの開発。チャットボット、画像認識、自然言語処理など、ニーズに合わせた開発を行います。",
+      features: ["要件定義", "プロトタイプ開発", "本番実装", "運用保守"]
     },
     {
       title: "AI導入",
@@ -55,7 +32,8 @@ export default function BusinessConsulting() {
     {
       title: "AIコミュニティ",
       description: "AI活用を学び、実践するコミュニティ。個人事業主・フリーランス（0-5名規模）向けに、AIで効率化する方法を学べます。",
-      features: ["オンラインコミュニティ", "定期勉強会", "AI活用事例共有", "メンバー限定コンテンツ"]
+      features: ["オンラインコミュニティ", "定期勉強会", "AI活用事例共有", "メンバー限定コンテンツ"],
+      link: "https://note.com/takuma_canada/n/ne8fd379a8cf2"
     },
     {
       title: "個別相談",
@@ -78,103 +56,75 @@ export default function BusinessConsulting() {
     {
       title: "SNS運用代行",
       description: "Instagram、X（Twitter）、TikTokなど、各SNSの特性を活かした運用代行。フォロワー増加とエンゲージメント向上を実現します。",
-      features: ["投稿コンテンツ作成", "ハッシュタグ戦略", "コミュニティ管理", "分析レポート"]
+      features: ["コンテンツ企画", "投稿作成・配信", "コミュニティ管理", "分析・レポート"]
     },
     {
       title: "ホームページ制作",
-      description: "ビジネスの成長を加速させるホームページを制作。デザイン、機能性、SEO対策を兼ね備えたサイトを提供します。",
-      features: ["レスポンシブデザイン", "SEO最適化", "CMS導入", "保守・運用サポート"]
+      description: "ビジネスの顔となるホームページを制作。デザイン性と機能性を兼ね備えた、成果につながるサイトを提供します。",
+      features: ["企画・設計", "デザイン制作", "コーディング", "SEO対策"]
     },
     {
       title: "LP制作",
-      description: "コンバージョン率を最大化するランディングページを制作。ターゲットに刺さるデザインとコピーライティングで成果を出します。",
-      features: ["ターゲット分析", "デザイン・コーディング", "A/Bテスト実施", "改善提案"]
+      description: "コンバージョンを最大化するランディングページ制作。ターゲットに刺さるデザインとコピーで、成果を生み出します。",
+      features: ["ターゲット分析", "デザイン制作", "コピーライティング", "A/Bテスト"]
     },
     {
       title: "MEO対策",
-      description: "Googleマップでの上位表示を実現するMEO対策。地域ビジネスの集客を強化し、来店数・問い合わせ数を増やします。",
-      features: ["Googleビジネスプロフィール最適化", "口コミ管理", "投稿管理", "効果測定"]
+      description: "Googleマップでの上位表示を実現するMEO対策。地域ビジネスの集客力を大幅に向上させます。",
+      features: ["Googleビジネスプロフィール最適化", "口コミ管理", "投稿運用", "効果測定"]
     },
     {
       title: "Google/Meta広告運用",
-      description: "Google広告、Facebook・Instagram広告の運用代行。費用対効果を最大化し、ビジネスの成長を加速させます。",
-      features: ["広告戦略立案", "クリエイティブ制作", "入札最適化", "レポーティング"]
+      description: "Google広告・Meta（Facebook/Instagram）広告の運用代行。ROIを最大化する広告戦略を実行します。",
+      features: ["広告戦略立案", "クリエイティブ制作", "運用・最適化", "レポーティング"]
     }
   ];
 
   return (
-    <div className="min-h-screen bg-white">
-      <SEOHead
-        title="ビジネス/マーケティングコンサルティング - MichiShirube OÜ | AI×マーケティング"
-        description="AIサービス（コンサルティング、研修、開発、導入）とマーケティングサービス（LINE構築、SNS運用、HP制作、LP制作、MEO対策、広告運用）を統合したビジネスコンサルティング。企業の成長を包括的にサポート。"
-        keywords="ビジネスコンサルティング,マーケティングコンサルティング,AIコンサルティング,LINE構築,SNS運用,ホームページ制作,LP制作,MEO対策,広告運用,DX推進,集客支援"
-        structuredData={structuredData}
-      />
+    <div className="min-h-screen flex flex-col bg-white">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/hero-bg.webp')",
-          }}
+      <main className="flex-grow">
+        {/* Hero Section with Background */}
+        <section
+          className="relative pt-32 pb-40 wave-bottom"
+          style={{ background: "linear-gradient(135deg, rgb(59, 89, 152) 0%, rgb(45, 70, 120) 100%)" }}
         >
-          <div className="absolute inset-0 bg-black/40"></div>
-        </div>
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center text-white"
+            >
+              <p className="text-sm text-white/80 mb-2">Business Consulting</p>
+              <h1 className="text-5xl md:text-7xl font-bold mb-6">
+                ビジネスコンサルティング
+              </h1>
+              <p className="text-lg text-white/90 max-w-2xl mx-auto">
+                AI活用からマーケティングまで、<br />
+                ビジネスの成長を包括的にサポートします
+              </p>
+            </motion.div>
+          </div>
+        </section>
 
-        <div
-          className={`relative z-10 text-center text-white transition-all duration-1000 px-4 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          <h1 className="text-4xl md:text-6xl font-black mb-4">
-            ビジネス/マーケティング
-            <br />
-            コンサルティング
-          </h1>
-          <p className="text-lg md:text-2xl font-light max-w-3xl mx-auto">
-            デジタルマーケティングからAI活用まで
-          </p>
-        </div>
-      </section>
+        <div className="container mx-auto px-4 pt-16 pb-16">
 
-      {/* Introduction */}
-      <section className="py-24 bg-white">
-        <div className="container">
+          {/* AI Services Section */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto text-center"
-          >
-            <p className="text-lg text-gray-700 leading-relaxed">
-              LINE構築、SNS運用、ホームページ制作、広告運用などのデジタルマーケティングから、AI導入・活用まで、ビジネスの成長を加速させる包括的なコンサルティングサービスを提供します。
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* AI Services Section */}
-      <section className="relative py-24 bg-gray-50 overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="pattern-text">AI SERVICES AI SERVICES AI SERVICES</div>
-        </div>
-
-        <div className="container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            className="mb-32"
           >
             <div className="text-center mb-16">
               <p className="text-sm text-gray-600 mb-2">AI Services</p>
               <h2 className="text-4xl md:text-5xl font-bold mb-8">AIサービス</h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
               {aiServices.map((service, index) => (
                 <motion.div
                   key={index}
@@ -201,76 +151,15 @@ export default function BusinessConsulting() {
                 </motion.div>
               ))}
             </div>
-
-            {/* 詳細はこちらボタン */}
-            <div className="text-center mt-12">
-              <Link href="/ai-services">
-                <Button className="bg-black hover:bg-gray-800 text-white px-12 py-6 text-lg">
-                  詳細はこちら
-                </Button>
-              </Link>
-            </div>
           </motion.div>
-        </div>
-      </section>
 
-      {/* Other Services Section */}
-      <section className="py-24 bg-white">
-        <div className="container">
+          {/* Marketing Services Section */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-          >
-            <div className="text-center mb-16">
-              <p className="text-sm text-gray-600 mb-2">Other Services</p>
-              <h2 className="text-4xl md:text-5xl font-bold mb-8">その他のサービス</h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
-              {otherServices.map((service, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="bg-white border border-gray-200 p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-                >
-                  <h4 className="text-2xl font-bold mb-4 border-b-2 border-black pb-2">
-                    {service.title}
-                  </h4>
-                  <p className="text-gray-600 text-sm mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start text-sm">
-                        <span className="text-black font-bold mr-2">•</span>
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Marketing Services Section */}
-      <section className="relative py-24 bg-gray-50 overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="pattern-text">MARKETING MARKETING MARKETING</div>
-        </div>
-
-        <div className="container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            className="mb-32"
           >
             <div className="text-center mb-16">
               <p className="text-sm text-gray-600 mb-2">Marketing Services</p>
@@ -305,88 +194,80 @@ export default function BusinessConsulting() {
               ))}
             </div>
           </motion.div>
-        </div>
-      </section>
 
-      {/* Why Choose Us */}
-      <section className="py-24 bg-white">
-        <div className="container">
+          {/* Other Services Section */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto"
+            className="mb-32"
           >
             <div className="text-center mb-16">
-              <p className="text-sm text-gray-600 mb-2">Our Strength</p>
-              <h2 className="text-4xl md:text-5xl font-bold">私たちの強み</h2>
+              <p className="text-sm text-gray-600 mb-2">Other Services</p>
+              <h2 className="text-4xl md:text-5xl font-bold mb-8">その他のサービス</h2>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="text-5xl font-black mb-4">4言語</div>
-                <div className="text-sm text-gray-600 mb-2">多言語対応</div>
-                <p className="text-sm text-gray-700">
-                  英語・フランス語・スペイン語・日本語で世界中のAIニュースを毎日収集。海外の最先端事例を日本市場に適応
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="text-5xl font-black mb-4">AI特化</div>
-                <div className="text-sm text-gray-600 mb-2">最新AI技術</div>
-                <p className="text-sm text-gray-700">
-                  シフト管理・在庫管理・日報・顧客対応・予約管理・マニュアル・コンテンツ・チャットボットの自動化実績
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="text-5xl font-black mb-4">実践型</div>
-                <div className="text-sm text-gray-600 mb-2">実践的サポート</div>
-                <p className="text-sm text-gray-700">
-                  理論だけでなく実際の業務に即した実践的な支援
-                </p>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+              {otherServices.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  className="bg-white border border-gray-200 p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                >
+                  <h4 className="text-2xl font-bold mb-4 border-b-2 border-black pb-2">
+                    {service.title}
+                  </h4>
+                  <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start text-sm">
+                        <span className="text-black font-bold mr-2">•</span>
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  {service.link && (
+                    <a href={service.link} target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" className="w-full hover:bg-black hover:text-white transition-colors">
+                        詳しく見る
+                        <ArrowUpRight className="ml-2" size={16} />
+                      </Button>
+                    </a>
+                  )}
+                </motion.div>
+              ))}
             </div>
           </motion.div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="relative py-24 bg-gray-50 overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="pattern-text">CONTACT CONTACT CONTACT</div>
-        </div>
-
-        <div className="container relative z-10">
+          {/* CTA Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto text-center"
+            className="text-center bg-gray-800 text-white py-20 px-8"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              ビジネスの成長を加速させましょう
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              まずはお気軽にご相談ください
             </h2>
-            <p className="text-lg text-gray-600 mb-12">
-              まずは無料相談で、あなたのビジネス課題をお聞かせください。最適なソリューションをご提案いたします。
+            <p className="text-lg mb-8 opacity-90">
+              あなたのビジネスに最適なソリューションをご提案します
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
-              <Button 
-                className="bg-[#333333] hover:bg-[#1a1a1a] text-white py-6 text-lg"
-                onClick={() => setLocation("/contact")}
-              >
-                無料相談を申し込む
+            <a href="/contact">
+              <Button size="lg" variant="secondary" className="text-lg px-8 py-6">
+                お問い合わせ
+                <ArrowUpRight className="ml-2" size={20} />
               </Button>
-              <Button 
-                className="bg-[#333333] hover:bg-[#1a1a1a] text-white py-6 text-lg"
-                onClick={() => setLocation("/")}
-              >
-                ホームに戻る
-              </Button>
-            </div>
+            </a>
           </motion.div>
         </div>
-      </section>
+      </main>
 
       <Footer />
     </div>

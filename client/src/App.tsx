@@ -15,6 +15,7 @@ const Contact = lazy(() => import("./pages/Contact"));
 const AIServices = lazy(() => import("./pages/AIServices"));
 const RelocationIncomeSupport = lazy(() => import("./pages/RelocationIncomeSupport"));
 const OverseasCommunity = lazy(() => import("./pages/OverseasCommunity"));
+const Start = lazy(() => import("./pages/Start"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Loading fallback component
@@ -51,6 +52,7 @@ function Router() {
           <Route path="/ai-services" component={AIServices} />
           <Route path={"/relocation-income-support"} component={RelocationIncomeSupport} />
           <Route path={"/overseas-community"} component={OverseasCommunity} />
+          <Route path="/start" component={Start} />
           <Route path="/404" component={NotFound} />
           {/* Final fallback route */}
           <Route component={NotFound} />

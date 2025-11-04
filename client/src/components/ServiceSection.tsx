@@ -52,7 +52,7 @@ export default function ServiceSection() {
         { name: "LP制作" },
         { name: "MEO対策" },
         { name: "Google/Meta広告運用" },
-        { name: "AIコミュニティ" },
+        { name: "AIコミュニティ", link: "https://note.com/takuma_canada/n/ne8fd379a8cf2", external: true },
         { name: "AIコンサルティング", link: "/ai-services" },
         { name: "AI導入", link: "/ai-services" },
         { name: "AI研修", link: "/ai-services" },
@@ -95,11 +95,19 @@ export default function ServiceSection() {
                 <div className="space-y-2 mb-6">
                   {service.items.map((item, idx) => (
                     item.link ? (
-                      <Link key={idx} href={item.link}>
-                        <div className="inline-block bg-black text-white px-3 py-1 text-sm mr-2 mb-2 hover:bg-gray-800 transition-colors cursor-pointer">
-                          {item.name}
-                        </div>
-                      </Link>
+                      item.external ? (
+                        <a key={idx} href={item.link} target="_blank" rel="noopener noreferrer">
+                          <div className="inline-block bg-black text-white px-3 py-1 text-sm mr-2 mb-2 hover:bg-gray-800 transition-colors cursor-pointer">
+                            {item.name}
+                          </div>
+                        </a>
+                      ) : (
+                        <Link key={idx} href={item.link}>
+                          <div className="inline-block bg-black text-white px-3 py-1 text-sm mr-2 mb-2 hover:bg-gray-800 transition-colors cursor-pointer">
+                            {item.name}
+                          </div>
+                        </Link>
+                      )
                     ) : (
                       <div key={idx} className="inline-block bg-black text-white px-3 py-1 text-sm mr-2 mb-2">
                         {item.name}
